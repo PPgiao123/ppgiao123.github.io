@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — ArrowGO</title>
+  <meta name="description" content="Privacy Policy for ArrowGO (com.ppgiao123.arrowgo) by PPgiao123.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f6f8fb;
+      --surface: #ffffff;
+      --text: #1b2430;
+      --muted: #526071;
+      --border: #dce3ec;
+      --accent: #1d6fe8;
+      --accent-soft: #eef4ff;
+      --accent-text: #164ea6;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f141c;
+        --surface: #171e29;
+        --text: #e8eef6;
+        --muted: #9aa8ba;
+        --border: #2a3444;
+        --accent: #68a5ff;
+        --accent-soft: #1e2d44;
+        --accent-text: #a7c9ff;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "PingFang SC", "Microsoft YaHei", "Noto Naskh Arabic", Tahoma, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.72;
+    }
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 28px 18px 56px;
+    }
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .breadcrumbs {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+    .back-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .back-link:hover { text-decoration: underline; }
+    .lang-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .lang-btn {
+      appearance: none;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .lang-btn:hover {
+      border-color: var(--accent);
+    }
+    .lang-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 26px;
+    }
+    .policy-section {
+      display: none;
+    }
+    .policy-section.active {
+      display: block;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: 1.85rem;
+      line-height: 1.3;
+    }
+    .meta {
+      background: var(--accent-soft);
+      color: var(--accent-text);
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 0.92rem;
+      margin-bottom: 24px;
+    }
+    .meta div + div {
+      margin-top: 2px;
+    }
+    h2 {
+      margin: 24px 0 8px;
+      font-size: 1.15rem;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    ul {
+      margin: 6px 0 14px;
+      padding-inline-start: 22px;
+    }
+    li + li {
+      margin-top: 6px;
+    }
+    a {
+      color: var(--accent);
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.9em;
+    }
+    #lang-ar {
+      text-align: right;
+    }
+    @media (max-width: 600px) {
+      .card { padding: 20px 16px; }
+      h1 { font-size: 1.5rem; }
+    }
+  </style>
+  <noscript>
+    <style>
+      .policy-section { display: block !important; margin-bottom: 2.5rem; }
+      .lang-nav { display: none; }
+    </style>
+  </noscript>
+</head>
+<body>
+  <div class="container">
+    <nav class="topbar" aria-label="Navigation and Language">
+      <div class="breadcrumbs">
+        <a class="back-link" href="../../">&larr; PPgiao123</a>
+        <span aria-hidden="true">/</span>
+        <a class="back-link" href="../">ArrowGO</a>
+      </div>
+      <div class="lang-nav" role="group" aria-label="Language selector">
+        <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">English</button>
+        <button type="button" class="lang-btn" data-lang="zh" aria-pressed="false">简体中文</button>
+        <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">Español</button>
+        <button type="button" class="lang-btn" data-lang="ar" aria-pressed="false">العربية</button>
+        <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">Français</button>
+      </div>
+    </nav>
+
+    <main class="card">
+      <!-- ENGLISH -->
+      <section id="lang-en" lang="en" dir="ltr" class="policy-section active">
+        <h1>Privacy Policy for ArrowGO</h1>
+        <div class="meta">
+          <div><strong>Application:</strong> ArrowGO (Package Name: <code>com.ppgiao123.arrowgo</code>)</div>
+          <div><strong>Release Scope:</strong> v1.8.2 (Offline Release Build without Ads or Analytics SDKs)</div>
+          <div><strong>Developer:</strong> PPgiao123</div>
+          <div><strong>Effective / Last Updated:</strong> 2026-11-20</div>
+          <div><strong>Contact Email:</strong> <a href="mailto:p981393625@gmail.com">p981393625@gmail.com</a></div>
+        </div>
+
+        <h2>1. Scope of This Policy</h2>
+        <p>This Privacy Policy applies specifically to the mobile game <strong>ArrowGO</strong> (Android package ID: <code>com.ppgiao123.arrowgo</code>), developed and published by <strong>PPgiao123</strong>. It explains how the current release (<code>v1.8.2</code>) handles user and device information.</p>
+
+        <h2>2. Information We Do Not Collect</h2>
+        <p>ArrowGO does not require account registration or sign-in, and the developer does <strong>not</strong> collect, transmit, store on external servers, sell, or share any personal or sensitive user data. In particular, ArrowGO does not collect:</p>
+        <ul>
+          <li>Names, email addresses, phone numbers, or account credentials;</li>
+          <li>Precise or approximate geographic location;</li>
+          <li>Contacts, photos, media files, microphone audio, or camera input;</li>
+          <li>Advertising identifiers, device fingerprints, or online usage telemetry.</li>
+        </ul>
+
+        <h2>3. Local On-Device Storage</h2>
+        <p>To support offline gameplay, ArrowGO stores gameplay state strictly locally on your device using standard local application storage. This includes unlocked levels, star ratings, theme unlocks, daily challenge and random mode records, remaining hearts or level timers, and user preferences (language, sound, vibration, and animation settings). This local data never leaves your device.</p>
+
+        <h2>4. Third-Party Services, Advertising &amp; Analytics</h2>
+        <p>The current <strong>ArrowGO v1.8.2</strong> release operates offline and integrates <strong>no advertising SDKs, no analytics SDKs, and no third-party tracking or social SDKs</strong>. No user or device data is shared with any third parties. If future versions introduce optional online features such as rewarded advertising, this Privacy Policy, in-app disclosures, and store declarations will be updated before those versions are released.</p>
+
+        <h2>5. Device Permissions</h2>
+        <p>ArrowGO does not request sensitive runtime permissions such as location, camera, microphone, contacts, or external media storage. Standard device vibration hardware may be used solely for optional tactile feedback when enabled in Settings.</p>
+
+        <h2>6. Children's Privacy</h2>
+        <p>ArrowGO is intended for a general audience aged <strong>13 and older</strong> and is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If a parent or guardian believes that a child has provided personal information to us (for example, via direct support email), please contact <a href="mailto:p981393625@gmail.com">p981393625@gmail.com</a> and we will promptly delete it.</p>
+
+        <h2>7. Data Retention &amp; Deletion</h2>
+        <p>Because all game saves and preferences reside exclusively on your device, you have full control over them. You can delete all locally stored game data at any time by clearing the app's storage in your Android system settings or by uninstalling ArrowGO.</p>
+
+        <h2>8. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time to reflect app updates or legal requirements. Any updates will be published on this page with a revised "Last Updated" date.</p>
+
+        <h2>9. Contact Us</h2>
+        <p>If you have any questions or privacy requests regarding ArrowGO, please contact the developer at <a href="mailto:p981393625@gmail.com">p981393625@gmail.com</a>.</p>
+      </section>
+
+      <!-- SIMPLIFIED CHINESE -->
+      <section id="lang-zh" lang="zh-Hans" dir="ltr" class="policy-section">
+        <h1>ArrowGO 隐私政策</h1>
+        <div class="meta">
+          <div><strong>应用名称：</strong>ArrowGO（Android 包名：<code>com.ppgiao123.arrowgo</code>）</div>
+          <div><strong>适用版本：</strong>v1.8.2（离线正式版，未接入广告与统计分析 SDK）</div>
+          <div><strong>开发者：</strong>PPgiao123</div>
+          <div><strong>生效 / 更新日期：</strong>2026-11-20</div>
+          <div><strong>联系邮箱：</strong><a href="mailto:p981393625@gmail.com">p981393625@gmail.com</a></div>
+        </div>
+
+        <h2>1. 适用范围</h2>
+        <p>本隐私政策专门适用于由 <strong>PPgiao123</strong> 开发并发布的移动游戏 <strong>ArrowGO</strong>（Android 包名：<code>com.ppgiao123.arrowgo</code>），用于说明当前 <code>v1.8.2</code> 版本如何处理用户与设备信息。</p>
+
+        <h2>2. 我们不收集的信息</h2>
+        <p>ArrowGO 无需注册或登录账号。开发者<strong>不会</strong>收集、上传、在外部服务器存储、出售或共享任何个人数据或敏感用户信息。具体而言，本应用不收集：</p>
+        <ul>
+          <li>姓名、电子邮箱、电话号码或账号凭证；</li>
+          <li>精确或粗略地理位置信息；</li>
+          <li>通讯录、相册与媒体文件、麦克风录音或相机画面；</li>
+          <li>广告标识符、设备指纹或在线行为遥测数据。</li>
+        </ul>
+
+        <h2>3. 设备本地存储</h2>
+        <p>为保障单机离线游玩体验，ArrowGO 仅在您的设备本地存储中保存游戏进度与设置，包括：已解锁关卡、星级评价、主题皮肤解锁状态、每日挑战与随机模式记录、剩余心数与关卡计时，以及语言、音效、震动和动画偏好。以上数据仅保留在本机，不会上传至任何服务器。</p>
+
+        <h2>4. 第三方服务、广告与数据分析</h2>
+        <p>当前 <strong>ArrowGO v1.8.2</strong> 为离线单机版本，<strong>未接入任何广告 SDK、统计分析 SDK 或第三方追踪 / 社交 SDK</strong>，也不会向任何第三方共享数据。若未来版本新增联网或激励广告等可选功能，我们将在发布前同步更新本隐私政策、应用内说明以及应用商店申报内容。</p>
+
+        <h2>5. 设备权限说明</h2>
+        <p>ArrowGO 不申请位置、相机、麦克风、通讯录或外部媒体读写等敏感权限。仅在您在设置中开启震动反馈时，调用系统基础震动功能以提供操作触感。</p>
+
+        <h2>6. 儿童隐私</h2>
+        <p>ArrowGO 面向 <strong>13 周岁及以上</strong>用户，不以 13 周岁以下儿童为目标受众，也不会有意收集 13 周岁以下儿童的个人信息。若家长或监护人认为儿童通过邮件等方式向我们提供了个人信息，请联系 <a href="mailto:p981393625@gmail.com">p981393625@gmail.com</a>，我们将及时予以删除。</p>
+
+        <h2>7. 数据保留与删除</h2>
+        <p>由于全部游戏存档与偏好设置均保存在您的个人设备中，您拥有完全控制权。您可以随时在 Android 系统“应用信息”中清除应用存储，或直接卸载 ArrowGO，以彻底删除所有本地数据。</p>
+
+        <h2>8. 本政策的变更</h2>
+        <p>如因版本功能调整或合规要求需要更新本政策，我们会在本页面发布修订后的内容并更新顶部日期。</p>
+
+        <h2>9. 联系我们</h2>
+        <p>如对 ArrowGO 或本隐私政策有任何疑问，请通过邮件联系开发者：<a href="mailto:p981393625@gmail.com">p981393625@gmail.com</a>。</p>
+      </section>
+
+      <!-- SPANISH -->
+      <section id="lang-es" lang="es" dir="ltr" class="policy-section">
+        <h1>Política de Privacidad de ArrowGO</h1>
+        <div class="meta">
+          <div><strong>Aplicación:</strong> ArrowGO (Nombre del paquete: <code>com.ppgiao123.arrowgo</code>)</div>
+          <div><strong>Alcance de la versión:</strong> v1.8.2 (Versión sin conexión, sin SDK de anuncios ni análisis)</div>
+          <div><strong>Desarrollador:</strong> PPgiao123</div>
+          <div><strong>Fecha de vigencia / Última actualización:</strong> 2026-11-20</div>
+          <div><strong>Correo de contacto:</strong> <a href="mailto:p981393625@gmail.com">p981393625@gmail.com</a></div>
+        </div>
+
+        <h2>1. Alcance de esta política</h2>
+        <p>Esta Política de Privacidad se aplica específicamente al juego móvil <strong>ArrowGO</strong> (ID de paquete en Android: <code>com.ppgiao123.arrowgo</code>), desarrollado y publicado por <strong>PPgiao123</strong>. Explica cómo la versión actual (<code>v1.8.2</code>) trata la información del usuario y del dispositivo.</p>
+
+        <h2>2. Información que no recopilamos</h2>
+        <p>ArrowGO no requiere crear cuentas ni iniciar sesión, y el desarrollador <strong>no</strong> recopila, transmite, almacena en servidores externos, vende ni comparte datos personales o sensibles del usuario. En concreto, ArrowGO no recopila:</p>
+        <ul>
+          <li>Nombres, correos electrónicos, números de teléfono ni credenciales de cuenta;</li>
+          <li>Ubicación geográfica precisa o aproximada;</li>
+          <li>Contactos, fotos, archivos multimedia, micrófono ni cámara;</li>
+          <li>Identificadores publicitarios, huellas del dispositivo ni telemetría de uso en línea.</li>
+        </ul>
+
+        <h2>3. Almacenamiento local en el dispositivo</h2>
+        <p>Para permitir el juego sin conexión, ArrowGO guarda el progreso estrictamente de forma local en su dispositivo mediante el almacenamiento estándar de la aplicación. Esto incluye niveles desbloqueados, estrellas, temas desbloqueados, registros de desafíos diarios y modo aleatorio, vidas o temporizadores y preferencias (idioma, sonido, vibración y animación). Estos datos nunca salen de su dispositivo.</p>
+
+        <h2>4. Servicios de terceros, publicidad y análisis</h2>
+        <p>La versión actual <strong>ArrowGO v1.8.2</strong> funciona sin conexión y <strong>no integra ningún SDK de publicidad, SDK de análisis ni SDK de seguimiento de terceros</strong>. No se comparten datos con terceros. Si futuras versiones incorporan funciones opcionales como anuncios recompensados, esta Política de Privacidad y las declaraciones dentro de la app se actualizarán antes del lanzamiento.</p>
+
+        <h2>5. Permisos del dispositivo</h2>
+        <p>ArrowGO no solicita permisos sensibles como ubicación, cámara, micrófono, contactos ni acceso a archivos multimedia. El motor de vibración estándar del dispositivo solo se utiliza si usted activa la respuesta háptica en Ajustes.</p>
+
+        <h2>6. Privacidad de los menores</h2>
+        <p>ArrowGO está dirigido a un público general de <strong>13 años o más</strong> y no está orientado a menores de 13 años. No recopilamos deliberadamente información personal de menores de 13 años. Si un padre o tutor cree que un menor nos ha enviado información personal (por ejemplo, por correo electrónico), puede escribir a <a href="mailto:p981393625@gmail.com">p981393625@gmail.com</a> para solicitar su eliminación inmediata.</p>
+
+        <h2>7. Conservación y eliminación de datos</h2>
+        <p>Como todo el progreso y los ajustes se guardan únicamente en su dispositivo, usted tiene el control total. Puede eliminar todos los datos locales en cualquier momento borrando los datos de la aplicación en los ajustes de Android o desinstalando ArrowGO.</p>
+
+        <h2>8. Cambios en esta Política de Privacidad</h2>
+        <p>Podemos actualizar esta política ocasionalmente para reflejar cambios en la aplicación o requisitos legales. Cualquier modificación se publicará en esta página con una nueva fecha de actualización.</p>
+
+        <h2>9. Contacto</h2>
+        <p>Si tiene preguntas o solicitudes sobre privacidad relacionadas con ArrowGO, escriba a <a href="mailto:p981393625@gmail.com">p981393625@gmail.com</a>.</p>
+      </section>
+
+      <!-- ARABIC (RTL) -->
+      <section id="lang-ar" lang="ar" dir="rtl" class="policy-section">
+        <h1>سياسة الخصوصية لتطبيق <span dir="ltr">ArrowGO</span></h1>
+        <div class="meta">
+          <div><strong>التطبيق:</strong> <span dir="ltr">ArrowGO</span> (اسم الحزمة: <code dir="ltr">com.ppgiao123.arrowgo</code>)</div>
+          <div><strong>نطاق الإصدار:</strong> <span dir="ltr">v1.8.2</span> (إصدار يعمل دون اتصال بالإنترنت وبدون حزم إعلانات أو تحليلات)</div>
+          <div><strong>المطور:</strong> <span dir="ltr">PPgiao123</span></div>
+          <div><strong>تاريخ السريان / آخر تحديث:</strong> <span dir="ltr">2026-11-20</span></div>
+          <div><strong>بريد التواصل:</strong> <a dir="ltr" href="mailto:p981393625@gmail.com">p981393625@gmail.com</a></div>
+        </div>
+
+        <h2>١. نطاق هذه السياسة</h2>
+        <p>تنطبق سياسة الخصوصية هذه تحديداً على لعبة الهواتف <strong dir="ltr">ArrowGO</strong> (معرّف حزمة أندرويد: <code dir="ltr">com.ppgiao123.arrowgo</code>) التي طوّرها ونشرها <strong dir="ltr">PPgiao123</strong>، وتوضح كيفية تعامل الإصدار الحالي (<span dir="ltr">v1.8.2</span>) مع بيانات المستخدم والجهاز.</p>
+
+        <h2>٢. المعلومات التي لا نجمعها</h2>
+        <p>لا يتطلب <span dir="ltr">ArrowGO</span> إنشاء حساب أو تسجيل الدخول، ولا يقوم المطور بجمع أي بيانات شخصية أو حساسة أو إرسالها أو تخزينها على خوادم خارجية أو بيعها أو مشاركتها. وعلى وجه الخصوص، لا يجمع التطبيق:</p>
+        <ul>
+          <li>الأسماء أو عناوين البريد الإلكتروني أو أرقام الهواتف أو بيانات الحساب؛</li>
+          <li>الموقع الجغرافي الدقيق أو التقريبي؛</li>
+          <li>جهات الاتصال أو الصور أو ملفات الوسائط أو الميكروفون أو الكاميرا؛</li>
+          <li>معرّفات الإعلانات أو بصمات الأجهزة أو بيانات التتبع عبر الإنترنت.</li>
+        </ul>
+
+        <h2>٣. التخزين المحلي على الجهاز</h2>
+        <p>لدعم اللعب دون اتصال، يحفظ <span dir="ltr">ArrowGO</span> حالة اللعب محلياً فقط على جهازك باستخدام مساحة التخزين القياسية للتطبيق. يشمل ذلك المراحل المفتوحة، وتقييمات النجوم، والسمات المفتوحة، وسجلات التحدي اليومي والوضع العشوائي، والقلوب أو المؤقتات المتبقية، وتفضيلات اللغة والصوت والاهتزاز والرسوم المتحركة. لا تغادر هذه البيانات جهازك مطلقاً.</p>
+
+        <h2>٤. خدمات الطرف الثالث والإعلانات والتحليلات</h2>
+        <p>يعمل الإصدار الحالي <strong dir="ltr">ArrowGO v1.8.2</strong> دون اتصال بالإنترنت ولا يدمج <strong>أي حزم برمجية للإعلانات أو التحليلات أو تتبع الجهات الخارجية</strong>، ولا يشارك أي بيانات مع أي طرف ثالث. في حال أضافت الإصدارات المستقبلية ميزات اختيارية مثل إعلانات المكافآت، سيتم تحديث هذه السياسة والإفصاحات داخل التطبيق والمتجر قبل الإصدار.</p>
+
+        <h2>٥. أذونات الجهاز</h2>
+        <p>لا يطلب <span dir="ltr">ArrowGO</span> أذونات حساسة مثل الموقع أو الكاميرا أو الميكروفون أو جهات الاتصال أو ملفات الوسائط. قد يُستخدم اهتزاز الجهاز القياسي فقط للاستجابة اللمسية الاختيارية عند تفعيلها في الإعدادات.</p>
+
+        <h2>٦. خصوصية الأطفال</h2>
+        <p>يستهدف <span dir="ltr">ArrowGO</span> المستخدمين بعمر <strong>13 عاماً فأكثر</strong> وليس موجهاً للأطفال دون سن 13 عاماً. نحن لا نجمع عن علم أي معلومات شخصية من الأطفال دون سن 13 عاماً. إذا اعتقد أحد الوالدين أو الأوصياء أن طفلاً قد قدّم معلومات شخصية (مثلاً عبر مراسلتنا بالبريد)، يُرجى التواصل عبر <a dir="ltr" href="mailto:p981393625@gmail.com">p981393625@gmail.com</a> وسنحذفها فوراً.</p>
+
+        <h2>٧. الاحتفاظ بالبيانات وحذفها</h2>
+        <p>نظراً لبقاء جميع ملفات الحفظ والإعدادات على جهازك فقط، فإنك تتحكم بها بالكامل. يمكنك حذف جميع البيانات المحلية في أي وقت عبر مسح بيانات التطبيق من إعدادات نظام أندرويد أو عبر إلغاء تثبيت <span dir="ltr">ArrowGO</span>.</p>
+
+        <h2>٨. التغييرات على سياسة الخصوصية</h2>
+        <p>قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر لتعكس تحديثات التطبيق أو المتطلبات القانونية، وسيتم نشر أي تعديل في هذه الصفحة مع تحديث التاريخ أعلاه.</p>
+
+        <h2>٩. تواصل معنا</h2>
+        <p>لأي استفسارات أو طلبات تتعلق بالخصوصية في <span dir="ltr">ArrowGO</span>، يُرجى مراسلة المطور على البريد الإلكتروني: <a dir="ltr" href="mailto:p981393625@gmail.com">p981393625@gmail.com</a>.</p>
+      </section>
+
+      <!-- FRENCH -->
+      <section id="lang-fr" lang="fr" dir="ltr" class="policy-section">
+        <h1>Politique de confidentialité d'ArrowGO</h1>
+        <div class="meta">
+          <div><strong>Application :</strong> ArrowGO (Nom du package : <code>com.ppgiao123.arrowgo</code>)</div>
+          <div><strong>Version concernée :</strong> v1.8.2 (Version hors ligne sans SDK publicitaire ni analytique)</div>
+          <div><strong>Développeur :</strong> PPgiao123</div>
+          <div><strong>Date d'entrée en vigueur / Mise à jour :</strong> 2026-11-20</div>
+          <div><strong>E-mail de contact :</strong> <a href="mailto:p981393625@gmail.com">p981393625@gmail.com</a></div>
+        </div>
+
+        <h2>1. Champ d'application</h2>
+        <p>La présente Politique de confidentialité s'applique spécifiquement au jeu mobile <strong>ArrowGO</strong> (identifiant de package Android : <code>com.ppgiao123.arrowgo</code>), développé et publié par <strong>PPgiao123</strong>. Elle explique comment la version actuelle (<code>v1.8.2</code>) traite les informations de l'utilisateur et de l'appareil.</p>
+
+        <h2>2. Données que nous ne collectons pas</h2>
+        <p>ArrowGO ne nécessite ni création de compte ni connexion, et le développeur ne collecte, ne transmet, ne stocke sur des serveurs externes, ne vend ni ne partage <strong>aucune</strong> donnée personnelle ou sensible. En particulier, ArrowGO ne collecte pas :</p>
+        <ul>
+          <li>Les noms, adresses e-mail, numéros de téléphone ou identifiants de compte ;</li>
+          <li>La localisation géographique précise ou approximative ;</li>
+          <li>Les contacts, photos, fichiers multimédias, le microphone ou la caméra ;</li>
+          <li>Les identifiants publicitaires, empreintes d'appareil ou données de télémétrie en ligne.</li>
+        </ul>
+
+        <h2>3. Stockage local sur l'appareil</h2>
+        <p>Pour permettre le jeu hors ligne, ArrowGO enregistre l'état de la partie exclusivement en local sur votre appareil via le stockage standard de l'application. Cela inclut les niveaux débloqués, les étoiles obtenues, les thèmes débloqués, l'historique du défi quotidien et du mode aléatoire, les cœurs ou chronomètres restants, ainsi que les préférences (langue, son, vibration et animations). Ces données ne quittent jamais votre appareil.</p>
+
+        <h2>4. Services tiers, publicité et analyse</h2>
+        <p>La version actuelle <strong>ArrowGO v1.8.2</strong> fonctionne hors ligne et n'intègre <strong>aucun SDK publicitaire, aucun SDK analytique et aucun SDK de suivi tiers</strong>. Aucune donnée n'est partagée avec des tiers. Si de futures versions introduisent des fonctionnalités optionnelles telles que des publicités récompensées, cette politique, les informations dans l'application et les déclarations sur la boutique seront mises à jour avant leur publication.</p>
+
+        <h2>5. Autorisations de l'appareil</h2>
+        <p>ArrowGO ne demande aucune autorisation sensible telle que la localisation, la caméra, le microphone, les contacts ou l'accès aux fichiers multimédias. Le vibreur standard de l'appareil est utilisé uniquement pour le retour haptique optionnel activé dans les Réglages.</p>
+
+        <h2>6. Confidentialité des enfants</h2>
+        <p>ArrowGO s'adresse à un public général âgé de <strong>13 ans et plus</strong> et ne vise pas les enfants de moins de 13 ans. Nous ne collectons pas sciemment de données personnelles auprès d'enfants de moins de 13 ans. Si un parent ou tuteur estime qu'un enfant nous a transmis des données personnelles (par exemple par e-mail), veuillez nous écrire à <a href="mailto:p981393625@gmail.com">p981393625@gmail.com</a> afin que nous les supprimions rapidement.</p>
+
+        <h2>7. Conservation et suppression des données</h2>
+        <p>Toutes les sauvegardes et préférences résidant uniquement sur votre appareil, vous en gardez le contrôle total. Vous pouvez supprimer toutes les données locales à tout moment en effaçant les données de l'application dans les paramètres Android ou en désinstallant ArrowGO.</p>
+
+        <h2>8. Modifications de cette politique</h2>
+        <p>Nous pouvons mettre à jour cette Politique de confidentialité occasionnellement pour refléter l'évolution de l'application ou des exigences légales. Toute mise à jour sera publiée sur cette page avec une date actualisée.</p>
+
+        <h2>9. Nous contacter</h2>
+        <p>Pour toute question ou demande relative à la confidentialité concernant ArrowGO, veuillez contacter le développeur à <a href="mailto:p981393625@gmail.com">p981393625@gmail.com</a>.</p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      var supported = ["en", "zh", "es", "ar", "fr"];
+      var buttons = document.querySelectorAll(".lang-btn");
+      var sections = document.querySelectorAll(".policy-section");
+
+      function selectLang(code, updateHash) {
+        if (supported.indexOf(code) === -1) code = "en";
+        for (var i = 0; i < sections.length; i++) {
+          var isTarget = sections[i].id === "lang-" + code;
+          sections[i].classList.toggle("active", isTarget);
+        }
+        for (var j = 0; j < buttons.length; j++) {
+          var active = buttons[j].getAttribute("data-lang") === code;
+          buttons[j].classList.toggle("active", active);
+          buttons[j].setAttribute("aria-pressed", active ? "true" : "false");
+        }
+        if (updateHash && window.history && window.history.replaceState) {
+          window.history.replaceState(null, "", "#" + code);
+        }
+      }
+
+      for (var k = 0; k < buttons.length; k++) {
+        buttons[k].addEventListener("click", function () {
+          selectLang(this.getAttribute("data-lang"), true);
+        });
+      }
+
+      var initial = window.location.hash ? window.location.hash.replace("#", "").toLowerCase() : "en";
+      selectLang(initial, false);
+    })();
+  </script>
+</body>
+</html>
