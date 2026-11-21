@@ -9,14 +9,16 @@
 ```text
 ppgiao123.github.io/
 ├── index.html                   # Play Console 开发者官网（MVP）
+├── app-ads.txt                  # Google AdMob authorized seller 声明
 └── ArrowGO/
     ├── index.html               # ArrowGO 游戏简介与支持页
     └── privacy/
-        └── index.html           # ArrowGO 五语隐私政策（v1.8.3 无广告版）
+        └── index.html           # ArrowGO 五语隐私政策（含 v1.10.2 AdMob + UMP 披露）
 ```
 
 GitHub Pages 上线访问地址（注意路径区分大小写）：
 - **开发者官网（MVP）**：`https://ppgiao123.github.io/`
+- **AdMob `app-ads.txt`**：`https://ppgiao123.github.io/app-ads.txt`
 - **ArrowGO 简介页**：`https://ppgiao123.github.io/ArrowGO/`
 - **ArrowGO 隐私政策 URL**：`https://ppgiao123.github.io/ArrowGO/privacy/`
 
@@ -26,7 +28,7 @@ GitHub Pages 上线访问地址（注意路径区分大小写）：
 - **Store settings -> Website（开发者官网）**：`https://ppgiao123.github.io/`
 - **App content -> Privacy policy（隐私政策 URL）**：`https://ppgiao123.github.io/ArrowGO/privacy/`
 
-## 未来扩展其他游戏与 AdMob `app-ads.txt` 说明
+## 未来扩展其他游戏与 `app-ads.txt` 说明
 
 - **新增游戏**：在仓库根目录新建对应游戏目录（例如 `ConquerGo/privacy/index.html`、`PlayWord/privacy/index.html`），并在根目录 `index.html` 增加游戏卡片链接即可。
-- **未来接入正式 AdMob 时**：直接将 `app-ads.txt` 放到本仓库根目录并推送即可在 `https://ppgiao123.github.io/app-ads.txt` 生效。
+- **`app-ads.txt`**：根目录 `app-ads.txt` 已配置 `pub-1727240179622631`，已在 `https://ppgiao123.github.io/app-ads.txt` 对外生效。
