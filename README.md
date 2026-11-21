@@ -12,7 +12,7 @@ ppgiao123.github.io/
 └── ArrowGO/
     ├── index.html               # ArrowGO 游戏简介与支持页
     └── privacy/
-        └── index.html           # ArrowGO 五语隐私政策（v1.8.2 无广告版）
+        └── index.html           # ArrowGO 五语隐私政策（v1.8.3 无广告版）
 ```
 
 GitHub Pages 上线访问地址（注意路径区分大小写）：
