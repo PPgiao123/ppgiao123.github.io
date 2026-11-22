@@ -3,138 +3,509 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ArrowGO — PPgiao123</title>
-  <meta name="description" content="Official overview, support information, and privacy policy for ArrowGO (com.ppgiao123.arrowgo) by PPgiao123.">
+  <title>ArrowGO — Game Details, Screenshots &amp; Support | PPgiao123</title>
+  <meta name="description" content="Official game page, features, privacy policy, and player support for ArrowGO (com.ppgiao123.arrowgo) by PPgiao123.">
+  <link rel="icon" type="image/png" href="../assets/arrowgo/icon.png">
+  <link rel="apple-touch-icon" href="../assets/arrowgo/icon.png">
+
+  <!-- Open Graph / Social Share Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ArrowGO — Minimalist Arrow-Logic Puzzle &amp; Local Duel">
+  <meta property="og:description" content="45 handcrafted arrow-logic levels with frozen arrows, key-lock chains, shaped boards, daily challenges, Zen random mode, and local 2P &amp; AI duels.">
+  <meta property="og:url" content="https://ppgiao123.github.io/ArrowGO/">
+  <meta property="og:image" content="https://ppgiao123.github.io/assets/arrowgo/feature-graphic.png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="500">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ArrowGO — Minimalist Arrow-Logic Puzzle &amp; Local Duel">
+  <meta name="twitter:description" content="45 handcrafted arrow-logic levels with frozen arrows, key-lock chains, shaped boards, daily challenges, Zen random mode, and local 2P &amp; AI duels.">
+  <meta name="twitter:image" content="https://ppgiao123.github.io/assets/arrowgo/feature-graphic.png">
+
   <style>
     :root {
       color-scheme: light dark;
-      --bg: #f6f8fb;
+      --bg: #f6f8f5;
       --surface: #ffffff;
-      --text: #1b2430;
-      --muted: #526071;
-      --border: #dce3ec;
-      --accent: #1d6fe8;
-      --accent-hover: #1558bd;
-      --badge-bg: #eef4ff;
-      --badge-text: #164ea6;
+      --surface-muted: #eef3ef;
+      --text: #0d254c;
+      --body: #475569;
+      --muted: #64748b;
+      --border: #dce5df;
+      --primary: #00b377;
+      --primary-hover: #009966;
+      --primary-soft: rgba(0, 179, 119, 0.12);
+      --primary-text: #007d53;
+      --sky: #0ea5e9;
+      --sky-soft: rgba(14, 165, 233, 0.12);
+      --sky-text: #0369a1;
+      --glow-mint: rgba(183, 248, 224, 0.72);
+      --glow-sky: rgba(91, 228, 248, 0.42);
+      --shadow-sm: 0 4px 14px rgba(13, 37, 76, 0.06);
+      --shadow-md: 0 14px 36px rgba(13, 37, 76, 0.09);
+      --shadow-lg: 0 22px 54px rgba(13, 37, 76, 0.12);
     }
+
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #0f141c;
-        --surface: #171e29;
+        --bg: #0f172a;
+        --surface: #162033;
+        --surface-muted: #1b283d;
         --text: #e8eef6;
-        --muted: #9aa8ba;
-        --border: #2a3444;
-        --accent: #68a5ff;
-        --accent-hover: #8bbaff;
-        --badge-bg: #1e2d44;
-        --badge-text: #a7c9ff;
+        --body: #cbd5e1;
+        --muted: #94a3b8;
+        --border: #26354d;
+        --primary: #2dd4a8;
+        --primary-hover: #14b88e;
+        --primary-soft: rgba(45, 212, 168, 0.16);
+        --primary-text: #5eead4;
+        --sky: #5bc8fa;
+        --sky-soft: rgba(91, 200, 250, 0.16);
+        --sky-text: #7dd3fc;
+        --glow-mint: rgba(45, 212, 168, 0.14);
+        --glow-sky: rgba(91, 200, 250, 0.14);
+        --shadow-sm: 0 4px 16px rgba(2, 6, 23, 0.32);
+        --shadow-md: 0 16px 38px rgba(2, 6, 23, 0.42);
+        --shadow-lg: 0 24px 60px rgba(2, 6, 23, 0.55);
       }
     }
+
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
-      background: var(--bg);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg);
+      background-image:
+        radial-gradient(860px 400px at 14% -5%, var(--glow-mint), transparent 65%),
+        radial-gradient(760px 400px at 92% 6%, var(--glow-sky), transparent 62%);
+      background-repeat: no-repeat;
       color: var(--text);
-      line-height: 1.68;
+      line-height: 1.65;
     }
+
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: var(--sky); }
+    button { font: inherit; }
+
     .container {
-      max-width: 780px;
+      max-width: 880px;
       margin: 0 auto;
       padding: 28px 20px 56px;
     }
-    .back-link {
-      display: inline-block;
-      margin-bottom: 18px;
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
+
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 20px;
     }
-    .back-link:hover { text-decoration: underline; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.94rem;
+      padding: 7px 12px;
+      border-radius: 10px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .back-link:hover,
+    .back-link:focus-visible {
+      border-color: var(--sky);
+      color: var(--sky);
+    }
+
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 26px 24px;
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: var(--shadow-md);
     }
-    h1 {
-      margin: 0 0 8px;
-      font-size: 1.9rem;
+
+    .app-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 20px;
     }
+
+    .app-icon {
+      width: 78px;
+      height: 78px;
+      border-radius: 18px;
+      box-shadow: var(--shadow-sm);
+      flex: 0 0 auto;
+    }
+
+    .app-header h1 {
+      margin: 0 0 6px;
+      font-size: 2rem;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+
     .pkg {
       display: inline-block;
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 0.85rem;
-      padding: 2px 8px;
-      border-radius: 6px;
-      background: var(--badge-bg);
-      color: var(--badge-text);
-      margin-bottom: 16px;
+      font-size: 0.84rem;
+      padding: 3px 9px;
+      border-radius: 7px;
+      background: var(--sky-soft);
+      color: var(--sky-text);
     }
-    h2 {
-      margin: 22px 0 8px;
-      font-size: 1.15rem;
+
+    .banner-wrap {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      margin-bottom: 22px;
     }
-    p {
-      margin: 0 0 10px;
+
+    .banner-wrap img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1024 / 500;
+      object-fit: contain;
     }
-    ul {
-      margin: 6px 0 16px;
-      padding-inline-start: 22px;
+
+    .lead {
+      margin: 0 0 18px;
+      font-size: 1.04rem;
+      color: var(--body);
     }
-    li + li {
-      margin-top: 6px;
-    }
-    .actions {
-      margin-top: 22px;
+
+    .cta-row {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
+      margin-bottom: 24px;
     }
-    .btn {
-      display: inline-block;
-      padding: 10px 18px;
-      border-radius: 10px;
-      background: var(--accent);
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 600;
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 12px 18px;
+      border-radius: 13px;
+      border: 1px solid transparent;
+      font-weight: 700;
       font-size: 0.95rem;
+      text-decoration: none;
+      cursor: pointer;
     }
-    .btn:hover, .btn:focus-visible {
-      background: var(--accent-hover);
+
+    .cta-btn svg {
+      width: 19px;
+      height: 19px;
+      flex: 0 0 auto;
     }
-    a { color: var(--accent); }
+
+    .cta-primary {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    .cta-primary:hover,
+    .cta-primary:focus-visible {
+      background: var(--primary-hover);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .cta-primary { color: #06281e; }
+    }
+
+    .cta-secondary {
+      background: var(--surface-muted);
+      color: var(--text);
+      border-color: var(--border);
+    }
+
+    .cta-secondary:hover,
+    .cta-secondary:focus-visible {
+      border-color: var(--sky);
+    }
+
+    .cta-pill {
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.22);
+      color: inherit;
+    }
+
+    .cta-secondary .cta-pill {
+      background: var(--sky-soft);
+      color: var(--sky-text);
+    }
+
+    h2 {
+      margin: 22px 0 10px;
+      font-size: 1.15rem;
+    }
+
+    ul.highlights {
+      margin: 0 0 18px;
+      padding-left: 20px;
+      color: var(--body);
+    }
+
+    ul.highlights li + li {
+      margin-top: 8px;
+    }
+
+    .support-box {
+      margin-top: 22px;
+      padding: 18px 20px;
+      border-radius: 14px;
+      background: var(--surface-muted);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .support-box p {
+      margin: 0;
+      color: var(--body);
+      font-size: 0.94rem;
+    }
+
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 90;
+      background: rgba(9, 14, 26, 0.72);
+      backdrop-filter: blur(6px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-backdrop[hidden] { display: none; }
+
+    .modal-dialog {
+      width: min(460px, 100%);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface-muted);
+      color: var(--text);
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
+    .modal-dialog h3 { margin: 0 32px 10px 0; font-size: 1.18rem; }
+    .modal-dialog p { margin: 0 0 14px; color: var(--body); font-size: 0.95rem; }
+    .modal-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+    @media (max-width: 600px) {
+      .card { padding: 18px; }
+      .cta-row { flex-direction: column; }
+      .cta-btn { width: 100%; }
+    }
   </style>
 </head>
 <body>
   <main class="container">
-    <a class="back-link" href="../">&larr; PPgiao123</a>
+    <div class="topbar">
+      <a class="back-link" href="../">&larr; PPgiao123 Home</a>
+      <a class="back-link" href="./privacy/">Privacy Policy</a>
+    </div>
+
     <article class="card">
-      <h1>ArrowGO</h1>
-      <div class="pkg">com.ppgiao123.arrowgo</div>
+      <div class="app-header">
+        <img class="app-icon" src="../assets/arrowgo/icon.png" alt="ArrowGO app icon" width="78" height="78">
+        <div>
+          <h1>ArrowGO</h1>
+          <div class="pkg">com.ppgiao123.arrowgo</div>
+        </div>
+      </div>
 
-      <p><strong>ArrowGO</strong> is a minimalist logic arrow-extraction puzzle and local duel game developed by <strong>PPgiao123</strong>.</p>
-      <p lang="zh-Hans"><strong>ArrowGO</strong> 是由 <strong>PPgiao123</strong> 开发的极简逻辑箭阵抽离解谜与本地对战手游。</p>
+      <div class="banner-wrap">
+        <img src="../assets/arrowgo/feature-graphic.png" alt="ArrowGO key visual banner" width="1024" height="500">
+      </div>
 
-      <h2>Highlights / 核心玩法</h2>
-      <ul>
-        <li><strong>Campaign (45 Levels):</strong> Progressive puzzles introducing frozen arrows, key-lock mechanisms, and shaped boards (Cross, Ring, Diamond, Heart).</li>
-        <li><strong>Daily Challenge &amp; Zen Random Mode:</strong> Deterministic daily seed puzzles and stress-free random boards with local progress saving.</li>
-        <li><strong>Local Versus Mode:</strong> Same-device 2-player duel and 3 difficulty levels of local AI opponents (BO3 / BO5).</li>
-        <li><strong>5 Languages:</strong> English, 简体中文, Español, العربية (RTL), and Français.</li>
+      <p class="lead">
+        <strong>ArrowGO</strong> is a minimalist arrow-extraction puzzle and local split-screen duel game developed by <strong>PPgiao123</strong>. Tap any arrow with a clear exit to slide it out along its path and clear the entire board.
+      </p>
+
+      <div class="cta-row">
+        <button type="button" class="cta-btn cta-primary" id="cta-play-store">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M3.61 1.814L13.793 12 3.61 22.186a1.75 1.75 0 0 1-.61-1.335V3.149c0-.517.224-.997.61-1.335zm11.24 11.242l2.747 2.747-10.777 6.13 8.03-8.877zm3.896-2.216l2.48 1.411c.76.432.76 1.526 0 1.958l-2.48 1.411-3.035-3.035 3.035-1.745zM6.82 2.067l10.777 6.13-2.747 2.747-8.03-8.877z"/>
+          </svg>
+          <span class="cta-label">Google Play</span>
+          <span class="cta-pill">Closed Beta</span>
+        </button>
+
+        <button type="button" class="cta-btn cta-secondary" id="cta-web-play">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/>
+          </svg>
+          <span class="cta-label">Play in Browser</span>
+          <span class="cta-pill">Coming Soon</span>
+        </button>
+
+        <a class="cta-btn cta-secondary" href="./privacy/">Privacy Policy</a>
+      </div>
+
+      <h2>Core Features</h2>
+      <ul class="highlights">
+        <li><strong>Campaign (45 Levels):</strong> Progressive puzzles featuring frozen arrows, key-lock chains, and shaped boards (Cross, Ring, Diamond, Heart).</li>
+        <li><strong>Daily Challenge &amp; Zen Random Mode:</strong> Deterministic daily seed puzzles plus relaxing random boards that charge free hints.</li>
+        <li><strong>Local Versus Mode:</strong> Same-device two-player split-board battles and three AI difficulty tiers in BO3 / BO5 sets.</li>
+        <li><strong>5 Languages &amp; Offline Play:</strong> English, Español, Français, العربية (RTL), and 简体中文—playable offline with no account required.</li>
       </ul>
 
-      <h2>Support &amp; Privacy / 支持与隐私</h2>
-      <p>Need help or found an issue? Contact <a href="mailto:p981393625@gmail.com">p981393625@gmail.com</a>.</p>
-      <p lang="zh-Hans">如需帮助或反馈问题，请联系开发者邮箱：<a href="mailto:p981393625@gmail.com">p981393625@gmail.com</a>。</p>
-
-      <div class="actions">
-        <a class="btn" href="./privacy/">Privacy Policy / 隐私政策</a>
+      <div class="support-box">
+        <div>
+          <strong>Player Support &amp; Privacy</strong>
+          <p>Need help or want to report a bug? Email <a href="mailto:p981393625@gmail.com">p981393625@gmail.com</a>.</p>
+        </div>
+        <a class="cta-btn cta-secondary" href="./privacy/">Read Privacy Policy</a>
       </div>
     </article>
   </main>
+
+  <div class="modal-backdrop" id="cta-modal" hidden role="dialog" aria-modal="true" aria-labelledby="cta-modal-title">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close" id="cta-modal-close" aria-label="Close modal">&times;</button>
+      <h3 id="cta-modal-title">ArrowGO</h3>
+      <p id="cta-modal-body"></p>
+      <div class="modal-actions" id="cta-modal-actions"></div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var ARROWGO_LINKS = {
+        googlePlayUrl: "", // e.g. "https://play.google.com/store/apps/details?id=com.ppgiao123.arrowgo"
+        webPlayUrl: ""     // e.g. "https://poki.com/en/g/arrowgo" or CrazyGames URL
+      };
+
+      var EMAIL_BETA_HREF = "mailto:p981393625@gmail.com?subject=ArrowGO%20Android%20Closed%20Beta%20Access&body=Hi%20PPgiao123%2C%20please%20add%20my%20Google%20Play%20email%20to%20the%20ArrowGO%20Android%20closed%20beta%3A%20";
+
+      var modal = document.getElementById("cta-modal");
+      var modalTitle = document.getElementById("cta-modal-title");
+      var modalBody = document.getElementById("cta-modal-body");
+      var modalActions = document.getElementById("cta-modal-actions");
+
+      function openModal(title, body, primaryHref, primaryLabel) {
+        modalTitle.textContent = title;
+        modalBody.textContent = body;
+        modalActions.textContent = "";
+
+        if (primaryHref && primaryLabel) {
+          var actionLink = document.createElement("a");
+          actionLink.className = "cta-btn cta-primary";
+          actionLink.href = primaryHref;
+          actionLink.textContent = primaryLabel;
+          modalActions.appendChild(actionLink);
+        }
+
+        var dismissBtn = document.createElement("button");
+        dismissBtn.type = "button";
+        dismissBtn.className = "cta-btn cta-secondary";
+        dismissBtn.textContent = "Close";
+        dismissBtn.addEventListener("click", closeModal);
+        modalActions.appendChild(dismissBtn);
+
+        modal.hidden = false;
+      }
+
+      function closeModal() {
+        modal.hidden = true;
+      }
+
+      function promoteButtonToLink(buttonEl, url, pillText) {
+        var linkEl = document.createElement("a");
+        linkEl.id = buttonEl.id;
+        linkEl.className = buttonEl.className;
+        linkEl.href = url;
+        linkEl.target = "_blank";
+        linkEl.rel = "noopener noreferrer";
+        while (buttonEl.firstChild) {
+          linkEl.appendChild(buttonEl.firstChild);
+        }
+        var pill = linkEl.querySelector(".cta-pill");
+        if (pill && pillText) {
+          pill.textContent = pillText;
+        }
+        buttonEl.parentNode.replaceChild(linkEl, buttonEl);
+      }
+
+      var playBtn = document.getElementById("cta-play-store");
+      if (ARROWGO_LINKS.googlePlayUrl) {
+        promoteButtonToLink(playBtn, ARROWGO_LINKS.googlePlayUrl, "Free");
+      } else {
+        playBtn.addEventListener("click", function () {
+          openModal(
+            "Android Closed Beta (Google Play)",
+            "ArrowGO is currently completing Google Play closed testing before public store launch. Send your Google Play email to join the 14-day beta and get early access.",
+            EMAIL_BETA_HREF,
+            "Request Beta Access"
+          );
+        });
+      }
+
+      var webBtn = document.getElementById("cta-web-play");
+      if (ARROWGO_LINKS.webPlayUrl) {
+        promoteButtonToLink(webBtn, ARROWGO_LINKS.webPlayUrl, "Free");
+      } else {
+        webBtn.addEventListener("click", function () {
+          openModal(
+            "Browser Version Coming Soon",
+            "An instant no-download HTML5 version is being prepared for web game portals (Poki / CrazyGames) so iOS, Android, and desktop players can play right in the browser.",
+            "mailto:p981393625@gmail.com?subject=ArrowGO%20Web%20Version%20Notify",
+            "Notify Me by Email"
+          );
+        });
+      }
+
+      document.getElementById("cta-modal-close").addEventListener("click", closeModal);
+      modal.addEventListener("click", function (e) {
+        if (e.target === modal) closeModal();
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeModal();
+      });
+    })();
+  </script>
+
+  <!-- Cloudflare Web Analytics (Free, cookieless, works directly on ppgiao123.github.io without a custom domain):
+       Replace YOUR_CLOUDFLARE_TOKEN below and uncomment the <script> line:
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR_CLOUDFLARE_TOKEN"}'></script>
+  -->
 </body>
 </html>
