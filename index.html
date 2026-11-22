@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ArrowGO — Minimalist Arrow-Logic Puzzle &amp; Local Duel | PPgiao123</title>
-  <meta name="description" content="Untangle 45 handcrafted arrow-logic puzzles with frozen arrows, key-lock chains, shaped boards, daily challenges, Zen random mode, and local 2P &amp; AI duels.">
+  <title>PPgiao123 — Independent Mobile &amp; Web Games</title>
+  <meta name="description" content="Official indie studio website, app portfolio, player support portal, and privacy policy center for apps and games published by PPgiao123.">
   <link rel="icon" type="image/png" href="./assets/arrowgo/icon.png">
   <link rel="apple-touch-icon" href="./assets/arrowgo/icon.png">
 
   <!-- Open Graph / Social Share Preview -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="ArrowGO — Minimalist Arrow-Logic Puzzle &amp; Local Duel">
-  <meta property="og:description" content="Tap an arrow with a clear exit to slide it out along its path. 45 handcrafted levels, daily challenges, Zen mode, and local 2P &amp; AI duels.">
+  <meta property="og:title" content="PPgiao123 — Independent Mobile &amp; Web Games">
+  <meta property="og:description" content="Explore minimalist logic puzzle and strategy apps by PPgiao123, including ArrowGO.">
   <meta property="og:url" content="https://ppgiao123.github.io/">
   <meta property="og:image" content="https://ppgiao123.github.io/assets/arrowgo/feature-graphic.png">
   <meta property="og:image:width" content="1024">
@@ -19,8 +19,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ArrowGO — Minimalist Arrow-Logic Puzzle &amp; Local Duel">
-  <meta name="twitter:description" content="Tap an arrow with a clear exit to slide it out along its path. 45 handcrafted levels, daily challenges, Zen mode, and local 2P &amp; AI duels.">
+  <meta name="twitter:title" content="PPgiao123 — Independent Mobile &amp; Web Games">
+  <meta name="twitter:description" content="Explore minimalist logic puzzle and strategy apps by PPgiao123, including ArrowGO.">
   <meta name="twitter:image" content="https://ppgiao123.github.io/assets/arrowgo/feature-graphic.png">
 
   <style>
@@ -39,17 +39,14 @@
       --primary-soft: rgba(0, 179, 119, 0.12);
       --primary-text: #007d53;
       --sky: #0ea5e9;
-      --sky-hover: #0284c7;
       --sky-soft: rgba(14, 165, 233, 0.12);
       --sky-text: #0369a1;
       --glow-mint: rgba(183, 248, 224, 0.72);
       --glow-sky: rgba(91, 228, 248, 0.45);
       --shadow-sm: 0 4px 14px rgba(13, 37, 76, 0.06);
       --shadow-md: 0 14px 36px rgba(13, 37, 76, 0.09);
-      --shadow-lg: 0 22px 54px rgba(13, 37, 76, 0.12);
       --radius-lg: 22px;
       --radius-md: 16px;
-      --radius-sm: 12px;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -67,14 +64,12 @@
         --primary-soft: rgba(45, 212, 168, 0.16);
         --primary-text: #5eead4;
         --sky: #5bc8fa;
-        --sky-hover: #38bdf8;
         --sky-soft: rgba(91, 200, 250, 0.16);
         --sky-text: #7dd3fc;
         --glow-mint: rgba(45, 212, 168, 0.14);
         --glow-sky: rgba(91, 200, 250, 0.14);
         --shadow-sm: 0 4px 16px rgba(2, 6, 23, 0.32);
         --shadow-md: 0 16px 38px rgba(2, 6, 23, 0.42);
-        --shadow-lg: 0 24px 60px rgba(2, 6, 23, 0.55);
       }
     }
 
@@ -109,12 +104,8 @@
       color: var(--sky);
     }
 
-    button {
-      font: inherit;
-    }
-
     .container {
-      max-width: 1120px;
+      max-width: 1100px;
       margin: 0 auto;
       padding: 0 20px;
     }
@@ -150,25 +141,37 @@
       letter-spacing: -0.02em;
     }
 
-    .brand img {
+    .brand-mark {
       width: 36px;
       height: 36px;
       border-radius: 10px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--sky) 100%);
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       box-shadow: var(--shadow-sm);
+      flex: 0 0 auto;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .brand-mark {
+        color: #06281e;
+      }
     }
 
     .brand-name {
-      font-size: 1.12rem;
+      font-size: 1.15rem;
     }
 
-    .brand-studio {
+    .brand-pill {
       font-size: 0.78rem;
-      font-weight: 600;
+      font-weight: 700;
       color: var(--muted);
       background: var(--surface-muted);
       border: 1px solid var(--border);
       border-radius: 999px;
-      padding: 2px 9px;
+      padding: 2px 10px;
     }
 
     .nav-links {
@@ -194,25 +197,12 @@
       color: var(--text);
     }
 
-    /* Hero Section */
-    .hero {
-      padding: 44px 0 36px;
+    /* Studio Hero */
+    .studio-hero {
+      padding: 46px 0 32px;
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-      gap: 36px;
-      align-items: center;
-    }
-
-    .hero-grid > *,
-    .duel-spotlight > *,
-    .features-grid > * {
-      min-width: 0;
-    }
-
-    .hero-badge {
+    .eyebrow-pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -222,127 +212,46 @@
       color: var(--primary-text);
       font-size: 0.84rem;
       font-weight: 700;
-      letter-spacing: 0.01em;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
-    .hero-badge-dot {
+    .eyebrow-dot {
       width: 8px;
       height: 8px;
       border-radius: 999px;
       background: var(--primary);
     }
 
-    .hero h1 {
-      margin: 0 0 16px;
-      font-size: clamp(2.15rem, 4.3vw, 3.25rem);
-      line-height: 1.1;
+    .studio-hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2.2rem, 4.4vw, 3.3rem);
+      line-height: 1.08;
       letter-spacing: -0.03em;
-      color: var(--text);
     }
 
-    .hero-subtitle {
-      margin: 0 0 26px;
-      font-size: 1.06rem;
+    .studio-subtitle {
+      margin: 0 0 22px;
+      font-size: 1.08rem;
       color: var(--body);
-      max-width: 56ch;
+      max-width: 60ch;
     }
 
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 20px;
-    }
-
-    .cta-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 13px 20px;
-      border-radius: 14px;
-      border: 1px solid transparent;
-      font-weight: 700;
-      font-size: 0.98rem;
-      line-height: 1.2;
-      text-decoration: none;
-      cursor: pointer;
-      transition: transform 0.14s ease, background-color 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
-    }
-
-    .cta-btn:active {
-      transform: translateY(1px) scale(0.99);
-    }
-
-    .cta-btn svg {
-      width: 20px;
-      height: 20px;
-      flex: 0 0 auto;
-    }
-
-    .cta-primary {
-      background: var(--primary);
-      color: #ffffff;
-      box-shadow: 0 10px 24px rgba(0, 179, 119, 0.25);
-    }
-
-    .cta-primary:hover,
-    .cta-primary:focus-visible {
-      background: var(--primary-hover);
-      box-shadow: 0 12px 28px rgba(0, 179, 119, 0.34);
-    }
-
-    .cta-secondary {
-      background: var(--surface);
-      color: var(--text);
-      border-color: var(--border);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .cta-secondary:hover,
-    .cta-secondary:focus-visible {
-      border-color: var(--sky);
-      background: var(--surface-elevated);
-    }
-
-    @media (prefers-color-scheme: dark) {
-      .cta-primary {
-        color: #06281e;
-      }
-    }
-
-    .cta-pill {
-      font-size: 0.74rem;
-      font-weight: 700;
-      padding: 3px 8px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.22);
-      color: inherit;
-      letter-spacing: 0.02em;
-    }
-
-    .cta-secondary .cta-pill {
-      background: var(--sky-soft);
-      color: var(--sky-text);
-    }
-
-    .trust-strip {
+    .highlights-strip {
       display: flex;
       flex-wrap: wrap;
       gap: 10px 18px;
       color: var(--muted);
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       font-weight: 600;
     }
 
-    .trust-item {
+    .highlight-item {
       display: inline-flex;
       align-items: center;
       gap: 7px;
     }
 
-    .trust-item svg {
+    .highlight-item svg {
       width: 16px;
       height: 16px;
       color: var(--primary);
@@ -365,7 +274,7 @@
       display: inline-flex;
       align-items: center;
       gap: 7px;
-      padding: 7px 13px;
+      padding: 7px 14px;
       border-radius: 999px;
       background: var(--surface);
       border: 1px solid var(--border);
@@ -382,105 +291,9 @@
       color: var(--sky);
     }
 
-    /* Hero Showcase */
-    .hero-visual {
-      display: grid;
-      gap: 14px;
-    }
-
-    .keyart-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 10px;
-      box-shadow: var(--shadow-md);
-      overflow: hidden;
-    }
-
-    .keyart-card img {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 1024 / 500;
-      object-fit: contain;
-      border-radius: 14px;
-    }
-
-    .preview-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 14px;
-      box-shadow: var(--shadow-md);
-    }
-
-    .preview-tabs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 12px;
-    }
-
-    .preview-tab {
-      flex: 1 1 110px;
-      padding: 7px 10px;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      background: var(--surface-muted);
-      color: var(--body);
-      font-size: 0.84rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
-    }
-
-    .preview-tab.is-active {
-      background: var(--text);
-      color: var(--bg);
-      border-color: var(--text);
-    }
-
-    .preview-stage {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--surface-muted);
-      border-radius: 16px;
-      padding: 12px;
-      min-height: 290px;
-    }
-
-    .preview-stage button {
-      background: none;
-      border: 0;
-      padding: 0;
-      cursor: zoom-in;
-      display: flex;
-      justify-content: center;
-      width: 100%;
-    }
-
-    .preview-stage img {
-      width: auto;
-      height: auto;
-      max-height: 280px;
-      max-width: 100%;
-      object-fit: contain;
-      border-radius: 14px;
-      box-shadow: var(--shadow-sm);
-      background: #f5f6f0;
-    }
-
-    .preview-caption {
-      margin: 10px 2px 0;
-      font-size: 0.86rem;
-      color: var(--muted);
-      text-align: center;
-      font-weight: 600;
-    }
-
-    /* Section Headings */
+    /* Sections */
     section.block {
-      padding: 36px 0;
+      padding: 28px 0 36px;
     }
 
     .section-head {
@@ -488,12 +301,12 @@
       flex-wrap: wrap;
       align-items: flex-end;
       justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 20px;
+      gap: 10px;
+      margin-bottom: 18px;
     }
 
     .section-kicker {
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       font-weight: 800;
       letter-spacing: 0.06em;
       text-transform: uppercase;
@@ -503,171 +316,285 @@
 
     .section-head h2 {
       margin: 0;
-      font-size: clamp(1.5rem, 2.8vw, 2rem);
+      font-size: clamp(1.45rem, 2.7vw, 1.95rem);
       letter-spacing: -0.02em;
     }
 
     .section-note {
       margin: 0;
       color: var(--muted);
-      font-size: 0.94rem;
+      font-size: 0.93rem;
     }
 
-    /* Screenshots Gallery */
-    .shots-grid {
+    /* Multi-App Portfolio Grid */
+    .apps-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      align-items: stretch;
     }
 
-    .shot-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 12px;
-      box-shadow: var(--shadow-sm);
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      transition: transform 0.16s ease, box-shadow 0.16s ease;
+    .apps-grid > *,
+    .craft-grid > * {
+      min-width: 0;
     }
 
-    .shot-card:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-md);
-    }
-
-    .shot-trigger {
-      display: block;
-      width: 100%;
-      padding: 0;
-      border: 0;
-      background: transparent;
-      cursor: zoom-in;
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
-    .shot-trigger img {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 9 / 16;
-      object-fit: cover;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-    }
-
-    .shot-title {
-      margin: 0;
-      font-size: 0.96rem;
-      font-weight: 700;
-      color: var(--text);
-    }
-
-    .shot-desc {
-      margin: 0;
-      font-size: 0.86rem;
-      color: var(--muted);
-    }
-
-    .duel-spotlight {
-      margin-top: 18px;
+    .app-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
       padding: 18px;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+    }
+
+    .app-card:hover {
+      transform: translateY(-2px);
+      border-color: color-mix(in srgb, var(--sky) 45%, var(--border));
+    }
+
+    .app-card--upcoming {
+      border-style: dashed;
       box-shadow: var(--shadow-sm);
-      display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-      gap: 22px;
+      background: color-mix(in srgb, var(--surface) 78%, var(--surface-muted));
+      justify-content: space-between;
+    }
+
+    .app-banner {
+      display: block;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .app-banner img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1024 / 500;
+      object-fit: contain;
+    }
+
+    .app-card-head {
+      display: flex;
       align-items: center;
+      gap: 14px;
     }
 
-    .duel-spotlight .shot-trigger img {
-      aspect-ratio: 1000 / 650;
-      object-fit: cover;
+    .app-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      box-shadow: var(--shadow-sm);
+      flex: 0 0 auto;
     }
 
-    .duel-copy h3 {
-      margin: 0 0 8px;
-      font-size: 1.28rem;
-      letter-spacing: -0.015em;
+    .app-meta {
+      min-width: 0;
     }
 
-    .duel-copy p {
-      margin: 0 0 12px;
+    .app-title-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .app-title-row h3 {
+      margin: 0;
+      font-size: 1.32rem;
+      letter-spacing: -0.02em;
+    }
+
+    .cat-pill {
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: var(--primary-text);
+    }
+
+    .cat-pill--muted {
+      background: var(--surface-muted);
+      color: var(--muted);
+      border: 1px solid var(--border);
+    }
+
+    .pkg {
+      display: inline-block;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.8rem;
+      padding: 2px 8px;
+      border-radius: 6px;
+      background: var(--sky-soft);
+      color: var(--sky-text);
+    }
+
+    .app-desc {
+      margin: 0;
       color: var(--body);
-      font-size: 0.96rem;
+      font-size: 0.95rem;
     }
 
-    .pill-list {
+    .status-chips {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
     }
 
-    .info-pill {
-      font-size: 0.82rem;
+    .status-chip {
+      font-size: 0.8rem;
       font-weight: 700;
-      padding: 5px 11px;
+      padding: 4px 10px;
       border-radius: 999px;
       background: var(--surface-muted);
       color: var(--body);
       border: 1px solid var(--border);
     }
 
-    /* Feature Cards */
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .feature-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 20px 22px;
-      box-shadow: var(--shadow-sm);
+    .app-actions {
       display: flex;
-      gap: 16px;
-      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: auto;
+      padding-top: 4px;
     }
 
-    .feature-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
+    .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: var(--primary-soft);
-      color: var(--primary-text);
+      gap: 8px;
+      padding: 11px 17px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      font-size: 0.93rem;
+      line-height: 1.2;
+      text-decoration: none;
+      transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus-visible {
+      background: var(--primary-hover);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .btn-primary {
+        color: #06281e;
+      }
+    }
+
+    .btn-secondary {
+      background: var(--surface-muted);
+      color: var(--text);
+      border-color: var(--border);
+    }
+
+    .btn-secondary:hover,
+    .btn-secondary:focus-visible {
+      border-color: var(--sky);
+      color: var(--sky);
+    }
+
+    .upcoming-art {
+      border-radius: 14px;
+      padding: 26px 20px;
+      background: var(--surface-muted);
+      border: 1px dashed var(--border);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--muted);
+    }
+
+    .upcoming-art-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 13px;
+      background: var(--sky-soft);
+      color: var(--sky-text);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       flex: 0 0 auto;
     }
 
-    .feature-icon--sky {
+    .upcoming-art-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .upcoming-art strong {
+      display: block;
+      color: var(--text);
+      font-size: 0.98rem;
+      margin-bottom: 2px;
+    }
+
+    .upcoming-art span {
+      font-size: 0.87rem;
+    }
+
+    /* Studio Craft Strip */
+    .craft-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .craft-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .craft-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 11px;
+      background: var(--primary-soft);
+      color: var(--primary-text);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    .craft-icon--sky {
       background: var(--sky-soft);
       color: var(--sky-text);
     }
 
-    .feature-icon svg {
-      width: 22px;
-      height: 22px;
+    .craft-icon svg {
+      width: 20px;
+      height: 20px;
     }
 
-    .feature-card h3 {
-      margin: 0 0 5px;
-      font-size: 1.06rem;
+    .craft-card h3 {
+      margin: 0 0 6px;
+      font-size: 1.03rem;
     }
 
-    .feature-card p {
+    .craft-card p {
       margin: 0;
       color: var(--body);
-      font-size: 0.93rem;
+      font-size: 0.91rem;
     }
 
-    /* Developer & Support Section */
+    /* Support Panel */
     .support-panel {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -678,26 +605,15 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: 18px;
     }
 
-    .support-meta h2 {
+    .support-panel h2 {
       margin: 0 0 6px;
       font-size: 1.25rem;
     }
 
-    .pkg {
-      display: inline-block;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 0.83rem;
-      padding: 3px 9px;
-      border-radius: 7px;
-      background: var(--sky-soft);
-      color: var(--sky-text);
-      margin-bottom: 8px;
-    }
-
-    .support-meta p {
+    .support-panel p {
       margin: 0;
       color: var(--body);
       font-size: 0.94rem;
@@ -709,28 +625,8 @@
       gap: 10px;
     }
 
-    .btn-outline {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 15px;
-      border-radius: 11px;
-      border: 1px solid var(--border);
-      background: var(--surface-muted);
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.9rem;
-    }
-
-    .btn-outline:hover,
-    .btn-outline:focus-visible {
-      border-color: var(--sky);
-      color: var(--sky);
-    }
-
     footer {
-      margin-top: 20px;
+      margin-top: 12px;
       padding: 22px 0 42px;
       border-top: 1px solid var(--border);
       color: var(--muted);
@@ -747,108 +643,20 @@
       text-decoration: underline;
     }
 
-    /* Modals & Lightbox */
-    .modal-backdrop {
-      position: fixed;
-      inset: 0;
-      z-index: 90;
-      background: rgba(9, 14, 26, 0.72);
-      backdrop-filter: blur(6px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .modal-backdrop[hidden] {
-      display: none;
-    }
-
-    .modal-dialog {
-      width: min(480px, 100%);
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 24px;
-      box-shadow: var(--shadow-lg);
-      position: relative;
-    }
-
-    .modal-dialog--lightbox {
-      width: auto;
-      max-width: min(92vw, 960px);
-      padding: 14px;
-    }
-
-    .modal-dialog--lightbox img {
-      max-height: 80vh;
-      width: auto;
-      margin: 0 auto;
-      border-radius: 12px;
-    }
-
-    .modal-close {
-      position: absolute;
-      top: 14px;
-      right: 14px;
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: var(--surface-muted);
-      color: var(--text);
-      font-size: 1.15rem;
-      line-height: 1;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .modal-dialog h3 {
-      margin: 0 36px 10px 0;
-      font-size: 1.2rem;
-    }
-
-    .modal-dialog p {
-      margin: 0 0 14px;
-      color: var(--body);
-      font-size: 0.95rem;
-    }
-
-    .modal-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 16px;
-    }
-
-    .lightbox-caption {
-      margin: 10px 6px 2px;
-      text-align: center;
-      color: var(--body);
-      font-weight: 600;
-      font-size: 0.92rem;
-    }
-
     /* Responsive Breakpoints */
-    @media (max-width: 920px) {
-      .hero-grid,
-      .duel-spotlight {
+    @media (max-width: 900px) {
+      .apps-grid,
+      .craft-grid {
         grid-template-columns: 1fr;
-      }
-
-      .shots-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
     @media (max-width: 640px) {
-      .hero {
-        padding-top: 26px;
+      .studio-hero {
+        padding-top: 28px;
       }
 
-      .brand-studio {
+      .brand-pill {
         display: none;
       }
 
@@ -857,29 +665,12 @@
         font-size: 0.85rem;
       }
 
-      .cta-row {
+      .app-actions {
         flex-direction: column;
       }
 
-      .cta-btn {
+      .btn {
         width: 100%;
-      }
-
-      .features-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .shots-grid {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        padding-bottom: 8px;
-        gap: 12px;
-      }
-
-      .shot-card {
-        flex: 0 0 68%;
-        scroll-snap-align: start;
       }
     }
   </style>
@@ -888,400 +679,241 @@
   <header class="topbar">
     <div class="container topbar-inner">
       <a class="brand" href="./">
-        <img src="./assets/arrowgo/icon.png" alt="ArrowGO app icon" width="36" height="36">
-        <span class="brand-name">ArrowGO</span>
-        <span class="brand-studio">by PPgiao123</span>
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h12"/>
+            <path d="M13 6l6 6-6 6"/>
+          </svg>
+        </span>
+        <span class="brand-name">PPgiao123</span>
+        <span class="brand-pill">Indie Studio</span>
       </a>
       <nav class="nav-links" aria-label="Primary Navigation">
-        <a href="#features">Features</a>
-        <a href="#screenshots">Screenshots</a>
+        <a href="#apps">Apps &amp; Games</a>
+        <a href="#about">About</a>
         <a href="#support">Support</a>
-        <a href="./ArrowGO/privacy/">Privacy</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <section class="hero" aria-label="ArrowGO Overview">
-      <div class="hero-grid">
-        <div>
-          <div class="hero-badge">
-            <span class="hero-badge-dot" aria-hidden="true"></span>
-            Minimalist Logic Puzzle &middot; Offline Ready
-          </div>
-          <h1>Untangle Every Arrow. Clear the Board.</h1>
-          <p class="hero-subtitle">
-            Tap an arrow with a clear exit to slide it out along its path. Solve 45 handcrafted puzzles with frozen arrows, key-lock chains, shaped boards, daily seeds, Zen random mode, and local 2P &amp; AI duels.
-          </p>
-
-          <div class="cta-row">
-            <button type="button" class="cta-btn cta-primary" id="cta-play-store">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M3.61 1.814L13.793 12 3.61 22.186a1.75 1.75 0 0 1-.61-1.335V3.149c0-.517.224-.997.61-1.335zm11.24 11.242l2.747 2.747-10.777 6.13 8.03-8.877zm3.896-2.216l2.48 1.411c.76.432.76 1.526 0 1.958l-2.48 1.411-3.035-3.035 3.035-1.745zM6.82 2.067l10.777 6.13-2.747 2.747-8.03-8.877z"/>
-              </svg>
-              <span class="cta-label">Google Play</span>
-              <span class="cta-pill">Closed Beta</span>
-            </button>
-
-            <button type="button" class="cta-btn cta-secondary" id="cta-web-play">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"/>
-                <polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/>
-              </svg>
-              <span class="cta-label">Play in Browser</span>
-              <span class="cta-pill">Coming Soon</span>
-            </button>
-          </div>
-
-          <div class="trust-strip" aria-label="Game highlights">
-            <span class="trust-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              No Account Needed
-            </span>
-            <span class="trust-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              Offline Play
-            </span>
-            <span class="trust-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              5 Languages (EN / ES / FR / AR / 中文)
-            </span>
-          </div>
-
-          <div class="social-links" id="social-links" hidden aria-label="Official Channels"></div>
-        </div>
-
-        <div class="hero-visual">
-          <div class="keyart-card">
-            <img src="./assets/arrowgo/feature-graphic.png" alt="ArrowGO key art showing colorful arrows on a minimalist grid board" width="1024" height="500">
-          </div>
-
-          <div class="preview-card" aria-label="Interactive Gameplay Preview">
-            <div class="preview-tabs" role="tablist" aria-label="Select gameplay view">
-              <button type="button" class="preview-tab is-active" role="tab" aria-selected="true"
-                data-src="./assets/arrowgo/shot-untangle.png"
-                data-alt="ArrowGO Level 15 Grand untangle board with arrows, frozen locks, and keys"
-                data-caption="Level 15 · Grand Untangle (Frozen &amp; Key-Lock Mechanics)">Grand Untangle</button>
-              <button type="button" class="preview-tab" role="tab" aria-selected="false"
-                data-src="./assets/arrowgo/shot-heart.png"
-                data-alt="ArrowGO Level 06 Heart of winter shaped puzzle board"
-                data-caption="Level 06 · Heart Board &amp; Star Timer Challenge">Heart Board</button>
-              <button type="button" class="preview-tab" role="tab" aria-selected="false"
-                data-src="./assets/arrowgo/shot-duel.png"
-                data-alt="ArrowGO split-screen local 2P and AI duel mode"
-                data-caption="Versus Mode · Split-Screen Local 2P &amp; 3-Tier AI">2P &amp; AI Duel</button>
-            </div>
-            <div class="preview-stage">
-              <button type="button" id="hero-preview-zoom" aria-label="Enlarge gameplay screenshot">
-                <img id="hero-preview-img" src="./assets/arrowgo/shot-untangle.png" alt="ArrowGO Level 15 Grand untangle board with arrows, frozen locks, and keys">
-              </button>
-            </div>
-            <p class="preview-caption" id="hero-preview-caption">Level 15 &middot; Grand Untangle (Frozen &amp; Key-Lock Mechanics)</p>
-          </div>
-        </div>
+    <section class="studio-hero" aria-label="Studio Overview">
+      <div class="eyebrow-pill">
+        <span class="eyebrow-dot" aria-hidden="true"></span>
+        Independent Mobile &amp; Web Developer
       </div>
+      <h1>PPgiao123</h1>
+      <p class="studio-subtitle">
+        Crafting clean, tactile puzzle and strategy apps built for focus, offline play, and players worldwide.
+      </p>
+
+      <div class="highlights-strip" aria-label="Studio principles">
+        <span class="highlight-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Android &amp; Web
+        </span>
+        <span class="highlight-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Offline-Friendly
+        </span>
+        <span class="highlight-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Multi-Language UI
+        </span>
+        <span class="highlight-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Privacy-First
+        </span>
+      </div>
+
+      <div class="social-links" id="studio-social-links" hidden aria-label="Official Channels"></div>
     </section>
 
-    <section class="block" id="screenshots" aria-label="Gameplay Screenshots">
+    <section class="block" id="apps" aria-label="Apps and Games Portfolio">
       <div class="section-head">
         <div>
-          <div class="section-kicker">In-Game Capture</div>
-          <h2>Clean Tactile Boards, Deep Spatial Logic</h2>
+          <div class="section-kicker">App Portfolio</div>
+          <h2>Published &amp; Upcoming Titles</h2>
         </div>
-        <p class="section-note">Tap any screenshot to inspect full resolution.</p>
+        <p class="section-note">Dedicated pages, screenshots, support, and privacy policies for every release.</p>
       </div>
 
-      <div class="shots-grid">
-        <article class="shot-card">
-          <button type="button" class="shot-trigger"
-            data-lightbox-src="./assets/arrowgo/shot-untangle.png"
-            data-lightbox-caption="Grand Untangle — Multi-layer arrow paths combining frozen blocks and key-lock chains">
-            <img src="./assets/arrowgo/shot-untangle.png" alt="ArrowGO Level 15 Grand Untangle gameplay screenshot" loading="lazy">
-          </button>
-          <h3 class="shot-title">Layered Arrow Paths</h3>
-          <p class="shot-desc">Spot the open lane, free blockers first, and beat the 3-star timer.</p>
-        </article>
+      <div class="apps-grid">
+        <article class="app-card">
+          <a class="app-banner" href="./ArrowGO/">
+            <img src="./assets/arrowgo/feature-graphic.png" alt="ArrowGO key visual banner" width="1024" height="500">
+          </a>
 
-        <article class="shot-card">
-          <button type="button" class="shot-trigger"
-            data-lightbox-src="./assets/arrowgo/shot-heart.png"
-            data-lightbox-caption="Shaped Boards — Heart, diamond, cross, and ring layouts across 45 levels">
-            <img src="./assets/arrowgo/shot-heart.png" alt="ArrowGO Level 06 Heart shaped board screenshot" loading="lazy">
-          </button>
-          <h3 class="shot-title">Shaped Boards</h3>
-          <p class="shot-desc">Solve puzzles inside heart, diamond, cross, and ring board silhouettes.</p>
-        </article>
-
-        <article class="shot-card">
-          <button type="button" class="shot-trigger"
-            data-lightbox-src="./assets/arrowgo/shot-keylock.png"
-            data-lightbox-caption="Key-Lock &amp; Freeze Mechanics — Release matching keys to unlock chained arrows">
-            <img src="./assets/arrowgo/shot-keylock.png" alt="ArrowGO Golden Key lock mechanic screenshot" loading="lazy">
-          </button>
-          <h3 class="shot-title">Keys, Locks &amp; Ice</h3>
-          <p class="shot-desc">Thaw frozen arrows and route key arrows to unlock chained paths.</p>
-        </article>
-
-        <article class="shot-card">
-          <button type="button" class="shot-trigger"
-            data-lightbox-src="./assets/arrowgo/shot-hub.png"
-            data-lightbox-caption="Campaign, Daily Seed &amp; Zen Random — 45 levels with unlockable board themes">
-            <img src="./assets/arrowgo/shot-hub.png" alt="ArrowGO 45-level Solo Challenge hub screenshot" loading="lazy">
-          </button>
-          <h3 class="shot-title">45 Levels + Daily &amp; Zen</h3>
-          <p class="shot-desc">Switch between timed Campaign, Daily Challenge, and stress-free Zen mode.</p>
-        </article>
-      </div>
-
-      <article class="duel-spotlight">
-        <button type="button" class="shot-trigger"
-          data-lightbox-src="./assets/arrowgo/shot-duel.png"
-          data-lightbox-caption="Versus Mode — Simultaneous split-board local 2P and 3-tier AI duels (BO3 / BO5)">
-          <img src="./assets/arrowgo/shot-duel.png" alt="ArrowGO split-screen local 2P and AI duel mode screenshot" loading="lazy">
-        </button>
-        <div class="duel-copy">
-          <div class="section-kicker">Versus Mode</div>
-          <h3>Local 2P &amp; 3-Tier AI Split-Board Duel</h3>
-          <p>
-            Race side-by-side on identical puzzles in Best-of-3 or Best-of-5 matches. Share one screen with a friend or challenge Easy, Normal, and Hard AI opponents—free to play anytime.
-          </p>
-          <div class="pill-list">
-            <span class="info-pill">Same-Device 2P</span>
-            <span class="info-pill">3 AI Difficulties</span>
-            <span class="info-pill">BO3 / BO5 Sets</span>
+          <div class="app-card-head">
+            <img class="app-icon" src="./assets/arrowgo/icon.png" alt="ArrowGO app icon" width="56" height="56">
+            <div class="app-meta">
+              <div class="app-title-row">
+                <h3>ArrowGO</h3>
+                <span class="cat-pill">Logic Puzzle &middot; Local Duel</span>
+              </div>
+              <div class="pkg">com.ppgiao123.arrowgo</div>
+            </div>
           </div>
-        </div>
-      </article>
+
+          <p class="app-desc">
+            45 handcrafted arrow-extraction levels with frozen arrows, key-lock chains, shaped boards, daily challenges, Zen random mode, and local 2P &amp; AI duels.
+          </p>
+
+          <div class="status-chips">
+            <span class="status-chip">Android Closed Beta</span>
+            <span class="status-chip">Web Coming Soon</span>
+            <span class="status-chip">5 Languages</span>
+          </div>
+
+          <div class="app-actions">
+            <a class="btn btn-primary" href="./ArrowGO/">View ArrowGO &rarr;</a>
+            <a class="btn btn-secondary" href="./ArrowGO/privacy/">Privacy Policy</a>
+          </div>
+        </article>
+
+        <article class="app-card app-card--upcoming">
+          <div class="upcoming-art">
+            <div class="upcoming-art-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14"/>
+                <path d="M5 12h14"/>
+              </svg>
+            </div>
+            <div>
+              <strong>Next Release Pipeline</strong>
+              <span>Future games and apps launch directly in this portfolio</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="app-title-row" style="margin-bottom: 10px;">
+              <h3>More Apps Coming Soon</h3>
+              <span class="cat-pill cat-pill--muted">In Development</span>
+            </div>
+            <p class="app-desc">
+              New puzzle, strategy, and utility apps by PPgiao123 are in development. Future titles will launch here with dedicated product pages, support, and privacy policies.
+            </p>
+          </div>
+
+          <div class="app-actions">
+            <a class="btn btn-secondary" href="mailto:p981393625@gmail.com?subject=PPgiao123%20Updates">Contact / Early Updates</a>
+          </div>
+        </article>
+
+        <!-- Template for adding a new app card (duplicate inside .apps-grid and create ./<AppDir>/ + ./<AppDir>/privacy/):
+        <article class="app-card">
+          <a class="app-banner" href="./ConquerGo/">
+            <img src="./assets/conquergo/feature-graphic.png" alt="ConquerGo key visual banner" width="1024" height="500">
+          </a>
+          <div class="app-card-head">
+            <img class="app-icon" src="./assets/conquergo/icon.png" alt="ConquerGo app icon" width="56" height="56">
+            <div class="app-meta">
+              <div class="app-title-row">
+                <h3>ConquerGo</h3>
+                <span class="cat-pill">Strategy</span>
+              </div>
+              <div class="pkg">com.ppgiao123.conquergo</div>
+            </div>
+          </div>
+          <p class="app-desc">Short description of the app or game.</p>
+          <div class="status-chips">
+            <span class="status-chip">Android</span>
+          </div>
+          <div class="app-actions">
+            <a class="btn btn-primary" href="./ConquerGo/">View ConquerGo &rarr;</a>
+            <a class="btn btn-secondary" href="./ConquerGo/privacy/">Privacy Policy</a>
+          </div>
+        </article>
+        -->
+      </div>
     </section>
 
-    <section class="block" id="features" aria-label="Game Highlights">
+    <section class="block" id="about" aria-label="How We Build">
       <div class="section-head">
         <div>
-          <div class="section-kicker">Why Players Like ArrowGO</div>
-          <h2>Designed for Quick Sessions &amp; Deep Focus</h2>
+          <div class="section-kicker">Studio Principles</div>
+          <h2>Built Simple, Fast, and Respectful</h2>
         </div>
       </div>
 
-      <div class="features-grid">
-        <article class="feature-card">
-          <div class="feature-icon" aria-hidden="true">
+      <div class="craft-grid">
+        <article class="craft-card">
+          <div class="craft-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="3" width="7" height="7" rx="1.5"/>
-              <rect x="14" y="3" width="7" height="7" rx="1.5"/>
-              <rect x="14" y="14" width="7" height="7" rx="1.5"/>
-              <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+              <rect x="3" y="3" width="18" height="18" rx="4"/>
+              <path d="M8 12h8"/>
+              <path d="M12 8l4 4-4 4"/>
             </svg>
           </div>
-          <div>
-            <h3>45 Handcrafted Levels</h3>
-            <p>Progressive puzzles introducing frozen arrows, key-lock chains, and shaped boards (Cross, Ring, Diamond, Heart) with verified zero-deadlock layouts.</p>
-          </div>
+          <h3>Tactile Minimalist Design</h3>
+          <p>Crisp typography, clear affordances, and responsive feedback tuned for both portrait phones and desktop displays.</p>
         </article>
 
-        <article class="feature-card">
-          <div class="feature-icon feature-icon--sky" aria-hidden="true">
+        <article class="craft-card">
+          <div class="craft-icon craft-icon--sky" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="4" width="18" height="18" rx="2"/>
-              <line x1="16" y1="2" x2="16" y2="6"/>
-              <line x1="8" y1="2" x2="8" y2="6"/>
-              <line x1="3" y1="10" x2="21" y2="10"/>
+              <rect x="2" y="4" width="20" height="14" rx="2"/>
+              <path d="M8 21h8"/>
+              <path d="M12 18v3"/>
             </svg>
           </div>
-          <div>
-            <h3>Daily Seed &amp; Zen Mode</h3>
-            <p>Tackle a deterministic daily puzzle shared across devices, or unwind with endless random boards in Zen mode that also charge free hints.</p>
-          </div>
+          <h3>Play Anywhere (Offline &amp; Web)</h3>
+          <p>Core gameplay works offline with local save persistence—no mandatory login walls, plus lightweight web editions coming soon.</p>
         </article>
 
-        <article class="feature-card">
-          <div class="feature-icon feature-icon--sky" aria-hidden="true">
+        <article class="craft-card">
+          <div class="craft-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14.5 17.5L3 6V3h3l11.5 11.5"/>
-              <path d="M13 19l6-6"/>
-              <path d="M16 16l4 4"/>
-              <path d="M19 21l2-2"/>
-              <path d="M14.5 6.5L18 3h3v3l-3.5 3.5"/>
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
             </svg>
           </div>
-          <div>
-            <h3>Local 2P &amp; AI Duels</h3>
-            <p>Pass-and-play or split-screen same-device battles plus three difficulty tiers of local AI opponents in crisp BO3 / BO5 sets.</p>
-          </div>
-        </article>
-
-        <article class="feature-card">
-          <div class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="2" y1="12" x2="22" y2="12"/>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-            </svg>
-          </div>
-          <div>
-            <h3>Themes &amp; 5 Languages</h3>
-            <p>Collect stars to unlock board themes including Midnight dark mode. Full native localization in English, Español, Français, العربية (RTL), and 简体中文.</p>
-          </div>
+          <h3>Transparent Support &amp; Privacy</h3>
+          <p>Every app ships with clear privacy disclosures, multi-language accessibility, and direct email support from the developer.</p>
         </article>
       </div>
     </section>
 
-    <section class="block" id="support" aria-label="Developer Support and Legal">
+    <section class="block" id="support" aria-label="Developer Support and Contact">
       <div class="support-panel">
-        <div class="support-meta">
-          <div class="pkg">com.ppgiao123.arrowgo</div>
-          <h2>Developer Support &amp; Public Policies</h2>
-          <p>Published by <strong>PPgiao123</strong>. Questions, bug reports, or privacy requests: <a href="mailto:p981393625@gmail.com">p981393625@gmail.com</a></p>
+        <div>
+          <h2>Developer Support &amp; Contact</h2>
+          <p>Questions, bug reports, beta testing requests, or privacy inquiries: <a href="mailto:p981393625@gmail.com">p981393625@gmail.com</a></p>
         </div>
         <div class="support-actions">
-          <a class="btn-outline" href="./ArrowGO/">ArrowGO Details</a>
-          <a class="btn-outline" href="./ArrowGO/privacy/">Privacy Policy</a>
-          <a class="btn-outline" href="mailto:p981393625@gmail.com?subject=ArrowGO%20Support">Email Support</a>
+          <a class="btn btn-secondary" href="./ArrowGO/">ArrowGO Page</a>
+          <a class="btn btn-secondary" href="./ArrowGO/privacy/">ArrowGO Privacy</a>
+          <a class="btn btn-primary" href="mailto:p981393625@gmail.com?subject=PPgiao123%20Support">Email Support</a>
         </div>
       </div>
-
-      <!-- Add future PPgiao123 games here, e.g.:
-      <div class="support-panel" style="margin-top: 16px;">
-        <div class="support-meta">
-          <div class="pkg">com.ppgiao123.conquergo</div>
-          <h2>ConquerGo</h2>
-          <p>Strategy campaign game by PPgiao123.</p>
-        </div>
-        <div class="support-actions">
-          <a class="btn-outline" href="./ConquerGo/">Details</a>
-          <a class="btn-outline" href="./ConquerGo/privacy/">Privacy Policy</a>
-        </div>
-      </div>
-      -->
     </section>
 
     <footer>
-      <span>&copy; 2026 PPgiao123 &middot; ArrowGO</span>
+      <span>&copy; 2026 PPgiao123 &middot; Independent App &amp; Game Studio</span>
       <span>
-        <a href="./ArrowGO/">Game Info</a> &middot;
+        <a href="./ArrowGO/">ArrowGO</a> &middot;
         <a href="./ArrowGO/privacy/">Privacy Policy</a> &middot;
         <a href="mailto:p981393625@gmail.com">p981393625@gmail.com</a>
       </span>
     </footer>
   </main>
 
-  <!-- Google Play Closed Beta / Web Play Coming Soon Info Modal -->
-  <div class="modal-backdrop" id="cta-modal" hidden role="dialog" aria-modal="true" aria-labelledby="cta-modal-title">
-    <div class="modal-dialog">
-      <button type="button" class="modal-close" id="cta-modal-close" aria-label="Close modal">&times;</button>
-      <h3 id="cta-modal-title">ArrowGO</h3>
-      <p id="cta-modal-body"></p>
-      <div class="modal-actions" id="cta-modal-actions"></div>
-    </div>
-  </div>
-
-  <!-- Screenshot Lightbox Modal -->
-  <div class="modal-backdrop" id="lightbox-modal" hidden role="dialog" aria-modal="true" aria-labelledby="lightbox-caption">
-    <div class="modal-dialog modal-dialog--lightbox">
-      <button type="button" class="modal-close" id="lightbox-close" aria-label="Close screenshot">&times;</button>
-      <img id="lightbox-img" src="./assets/arrowgo/shot-untangle.png" alt="">
-      <p class="lightbox-caption" id="lightbox-caption"></p>
-    </div>
-  </div>
-
   <script>
     (function () {
-      // Single configuration object: paste live store/portal URLs here to activate external links instantly.
-      var ARROWGO_LINKS = {
-        googlePlayUrl: "", // e.g. "https://play.google.com/store/apps/details?id=com.ppgiao123.arrowgo"
-        webPlayUrl: "",    // e.g. "https://poki.com/en/g/arrowgo" or CrazyGames URL
+      var STUDIO_LINKS = {
         xUrl: "",          // e.g. "https://x.com/your_handle"
         instagramUrl: "",  // e.g. "https://instagram.com/your_handle"
         youtubeUrl: ""     // e.g. "https://youtube.com/@your_handle"
       };
 
-      var EMAIL_BETA_HREF = "mailto:p981393625@gmail.com?subject=ArrowGO%20Android%20Closed%20Beta%20Access&body=Hi%20PPgiao123%2C%20please%20add%20my%20Google%20Play%20email%20to%20the%20ArrowGO%20Android%20closed%20beta%3A%20";
-
-      var ctaModal = document.getElementById("cta-modal");
-      var ctaModalTitle = document.getElementById("cta-modal-title");
-      var ctaModalBody = document.getElementById("cta-modal-body");
-      var ctaModalActions = document.getElementById("cta-modal-actions");
-
-      function openCtaModal(title, body, primaryHref, primaryLabel) {
-        ctaModalTitle.textContent = title;
-        ctaModalBody.textContent = body;
-        ctaModalActions.textContent = "";
-
-        if (primaryHref && primaryLabel) {
-          var actionLink = document.createElement("a");
-          actionLink.className = "cta-btn cta-primary";
-          actionLink.href = primaryHref;
-          actionLink.textContent = primaryLabel;
-          ctaModalActions.appendChild(actionLink);
-        }
-
-        var dismissBtn = document.createElement("button");
-        dismissBtn.type = "button";
-        dismissBtn.className = "cta-btn cta-secondary";
-        dismissBtn.textContent = "Close";
-        dismissBtn.addEventListener("click", closeCtaModal);
-        ctaModalActions.appendChild(dismissBtn);
-
-        ctaModal.hidden = false;
-      }
-
-      function closeCtaModal() {
-        ctaModal.hidden = true;
-      }
-
-      function promoteButtonToLink(buttonEl, url, pillText) {
-        var linkEl = document.createElement("a");
-        linkEl.id = buttonEl.id;
-        linkEl.className = buttonEl.className;
-        linkEl.href = url;
-        linkEl.target = "_blank";
-        linkEl.rel = "noopener noreferrer";
-        while (buttonEl.firstChild) {
-          linkEl.appendChild(buttonEl.firstChild);
-        }
-        var pill = linkEl.querySelector(".cta-pill");
-        if (pill && pillText) {
-          pill.textContent = pillText;
-        }
-        buttonEl.parentNode.replaceChild(linkEl, buttonEl);
-      }
-
-      var playBtn = document.getElementById("cta-play-store");
-      if (ARROWGO_LINKS.googlePlayUrl) {
-        promoteButtonToLink(playBtn, ARROWGO_LINKS.googlePlayUrl, "Free");
-      } else {
-        playBtn.addEventListener("click", function () {
-          openCtaModal(
-            "Android Closed Beta (Google Play)",
-            "ArrowGO is currently completing Google Play closed testing before public store launch. Send your Google Play email to join the 14-day beta and get early access.",
-            EMAIL_BETA_HREF,
-            "Request Beta Access"
-          );
-        });
-      }
-
-      var webBtn = document.getElementById("cta-web-play");
-      if (ARROWGO_LINKS.webPlayUrl) {
-        promoteButtonToLink(webBtn, ARROWGO_LINKS.webPlayUrl, "Free");
-      } else {
-        webBtn.addEventListener("click", function () {
-          openCtaModal(
-            "Browser Version Coming Soon",
-            "An instant no-download HTML5 version is being prepared for web game portals (Poki / CrazyGames) so iOS, Android, and desktop players can play right in the browser.",
-            "mailto:p981393625@gmail.com?subject=ArrowGO%20Web%20Version%20Notify",
-            "Notify Me by Email"
-          );
-        });
-      }
-
-      var socialContainer = document.getElementById("social-links");
+      var socialContainer = document.getElementById("studio-social-links");
       var socialSpecs = [
         { key: "xUrl", label: "Follow on X" },
         { key: "instagramUrl", label: "Instagram" },
         { key: "youtubeUrl", label: "YouTube" }
       ];
-      var activeSocialCount = 0;
+      var count = 0;
       socialSpecs.forEach(function (spec) {
-        var href = ARROWGO_LINKS[spec.key];
+        var href = STUDIO_LINKS[spec.key];
         if (!href) return;
         var chip = document.createElement("a");
         chip.className = "social-chip";
@@ -1290,79 +922,11 @@
         chip.rel = "noopener noreferrer";
         chip.textContent = spec.label;
         socialContainer.appendChild(chip);
-        activeSocialCount += 1;
+        count += 1;
       });
-      if (activeSocialCount > 0) {
+      if (count > 0) {
         socialContainer.hidden = false;
       }
-
-      document.getElementById("cta-modal-close").addEventListener("click", closeCtaModal);
-      ctaModal.addEventListener("click", function (e) {
-        if (e.target === ctaModal) closeCtaModal();
-      });
-
-      // Hero interactive preview switcher
-      var previewTabs = document.querySelectorAll(".preview-tab");
-      var previewImg = document.getElementById("hero-preview-img");
-      var previewCaption = document.getElementById("hero-preview-caption");
-      var previewZoom = document.getElementById("hero-preview-zoom");
-
-      previewTabs.forEach(function (tab) {
-        tab.addEventListener("click", function () {
-          previewTabs.forEach(function (t) {
-            t.classList.remove("is-active");
-            t.setAttribute("aria-selected", "false");
-          });
-          tab.classList.add("is-active");
-          tab.setAttribute("aria-selected", "true");
-          previewImg.src = tab.getAttribute("data-src");
-          previewImg.alt = tab.getAttribute("data-alt");
-          previewCaption.textContent = tab.getAttribute("data-caption");
-        });
-      });
-
-      // Lightbox
-      var lightbox = document.getElementById("lightbox-modal");
-      var lightboxImg = document.getElementById("lightbox-img");
-      var lightboxCaption = document.getElementById("lightbox-caption");
-
-      function openLightbox(src, alt, caption) {
-        lightboxImg.src = src;
-        lightboxImg.alt = alt || caption || "ArrowGO screenshot";
-        lightboxCaption.textContent = caption || "";
-        lightbox.hidden = false;
-      }
-
-      function closeLightbox() {
-        lightbox.hidden = true;
-      }
-
-      previewZoom.addEventListener("click", function () {
-        openLightbox(previewImg.src, previewImg.alt, previewCaption.textContent);
-      });
-
-      document.querySelectorAll(".shot-trigger").forEach(function (trigger) {
-        trigger.addEventListener("click", function () {
-          var img = trigger.querySelector("img");
-          openLightbox(
-            trigger.getAttribute("data-lightbox-src"),
-            img ? img.alt : "",
-            trigger.getAttribute("data-lightbox-caption")
-          );
-        });
-      });
-
-      document.getElementById("lightbox-close").addEventListener("click", closeLightbox);
-      lightbox.addEventListener("click", function (e) {
-        if (e.target === lightbox) closeLightbox();
-      });
-
-      document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape") {
-          closeCtaModal();
-          closeLightbox();
-        }
-      });
     })();
   </script>
 
