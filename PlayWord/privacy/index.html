@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — PlayWord</title>
+  <meta name="description" content="Privacy Policy for PlayWord (com.ppgiao123.playword) by PPgiao123.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f6f8fb;
+      --surface: #ffffff;
+      --text: #1b2430;
+      --muted: #526071;
+      --border: #dce3ec;
+      --accent: #0ea5e9;
+      --accent-soft: #eef7ff;
+      --accent-text: #0369a1;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f141c;
+        --surface: #171e29;
+        --text: #e8eef6;
+        --muted: #9aa8ba;
+        --border: #2a3444;
+        --accent: #5bc8fa;
+        --accent-soft: #1b2d42;
+        --accent-text: #93dfff;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "PingFang SC", "Microsoft YaHei", "Noto Sans TC", Tahoma, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.72;
+    }
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 28px 18px 56px;
+    }
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .breadcrumbs {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+    .back-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .back-link:hover { text-decoration: underline; }
+    .lang-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .lang-btn {
+      appearance: none;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .lang-btn:hover {
+      border-color: var(--accent);
+    }
+    .lang-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      .lang-btn.active {
+        color: #082032;
+      }
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 26px;
+    }
+    .policy-section {
+      display: none;
+    }
+    .policy-section.active {
+      display: block;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: 1.85rem;
+      line-height: 1.3;
+    }
+    .meta {
+      background: var(--accent-soft);
+      color: var(--accent-text);
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 0.92rem;
+      margin-bottom: 24px;
+    }
+    .meta div + div {
+      margin-top: 2px;
+    }
+    h2 {
+      margin: 24px 0 8px;
+      font-size: 1.15rem;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    ul {
+      margin: 6px 0 14px;
+      padding-inline-start: 22px;
+    }
+    li + li {
+      margin-top: 6px;
+    }
+    a {
+      color: var(--accent);
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.9em;
+    }
+    @media (max-width: 600px) {
+      .card { padding: 20px 16px; }
+      h1 { font-size: 1.5rem; }
+    }
+  </style>
+  <noscript>
+    <style>
+      .policy-section { display: block !important; margin-bottom: 2.5rem; }
+      .lang-nav { display: none; }
+    </style>
+  </noscript>
+</head>
+<body>
+  <div class="container">
+    <nav class="topbar" aria-label="Navigation and Language">
+      <div class="breadcrumbs">
+        <a class="back-link" href="../../">&larr; PPgiao123</a>
+        <span aria-hidden="true">/</span>
+        <a class="back-link" href="../">PlayWord</a>
+      </div>
+      <div class="lang-nav" role="group" aria-label="Language selector">
+        <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">English</button>
+        <button type="button" class="lang-btn" data-lang="zh" aria-pressed="false">简体中文</button>
+        <button type="button" class="lang-btn" data-lang="zh-tw" aria-pressed="false">繁體中文</button>
+      </div>
+    </nav>
+
+    <main class="card">
+      <!-- ENGLISH -->
+      <section id="lang-en" lang="en" dir="ltr" class="policy-section active">
+        <h1>Privacy Policy for PlayWord</h1>
+        <div class="meta">
+          <div><strong>Application:</strong> PlayWord (Package Name: <code>com.ppgiao123.playword</code>)</div>
+          <div><strong>Release Scope:</strong> v1.0.0 (100% offline, ad-free, no account sign-in)</div>
+          <div><strong>Developer:</strong> PPgiao123</div>
+          <div><strong>Effective / Last Updated:</strong> 2026-11-26</div>
+          <div><strong>Contact Email:</strong> <a href="mailto:p981393625@gmail.com">p981393625@gmail.com</a></div>
+        </div>
+
+        <h2>1. Scope of This Policy</h2>
+        <p>This Privacy Policy applies to the English vocabulary learning app and solo word game <strong>PlayWord</strong> (Android package ID: <code>com.ppgiao123.playword</code> and Windows desktop edition), developed and published by <strong>PPgiao123</strong>. It explains how <code>v1.0.0</code> handles user and device information.</p>
+
+        <h2>2. Information We Do Not Collect</h2>
+        <p><strong>PlayWord v1.0.0</strong> is designed as an offline-first learning tool. It does not require account registration or sign-in, and the developer does <strong>not</strong> operate game servers or collect, transmit, store, sell, or share any personal information, usage telemetry, crash logs, contacts, photos, microphone audio, camera input, precise or approximate location, device identifiers, or Android Advertising IDs.</p>
+
+        <h2>3. Local On-Device Storage &amp; Backup Codes</h2>
+        <p>To support offline study without an account, PlayWord stores your learning data strictly on your own device using local application storage:</p>
+        <ul>
+          <li><strong>Learning &amp; review state:</strong> selected wordbook, FSRS-4.5 review schedules, mastered and review word lists, vocabulary assessment results and breakpoints, and solo duel statistics;</li>
+          <li><strong>App preferences:</strong> interface language, reading voice accent, audio volume, screen shake toggle, haptic feedback toggle, and reading theme.</li>
+        </ul>
+        <p>In Settings, you can optionally export or import a local compressed backup code (<code>PW1:</code>) via your device clipboard. Clipboard reads and writes occur only when you explicitly tap the export or restore buttons, and backup data never leaves your device unless you choose to copy and save it yourself.</p>
+
+        <h2>4. Third-Party Services &amp; Advertising</h2>
+        <p><strong>PlayWord v1.0.0</strong> contains <strong>no advertisements</strong> and does <strong>not</strong> integrate any third-party advertising networks, analytics SDKs, crash reporters, or social trackers. Offline English pronunciation uses your device's built-in Text-to-Speech (TTS) engine locally. If a future version adds optional advertising, in-app purchases, or online features, this Privacy Policy and the Google Play Data safety declaration will be updated before that release is published.</p>
+
+        <h2>5. Device Permissions</h2>
+        <p>PlayWord requests only minimal permissions strictly needed for local features:</p>
+        <ul>
+          <li><code>VIBRATE</code>: optional tactile feedback on button taps (can be disabled anytime inside Settings);</li>
+          <li><code>android.intent.action.TTS_SERVICE</code> query: checks your device's local Text-to-Speech voice availability for offline word pronunciation.</li>
+        </ul>
+        <p><code>v1.0.0</code> does <strong>not</strong> request <code>INTERNET</code>, <code>AD_ID</code>, location, camera, microphone, contacts, or external media storage permissions.</p>
+
+        <h2>6. Children's Privacy</h2>
+        <p>PlayWord is designed for learners aged <strong>13 and older</strong> (including high school, university, and adult exam preparation wordbooks) and is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If a parent or guardian believes that a child has provided personal information to us (for example, by direct support email), please contact <a href="mailto:p981393625@gmail.com">p981393625@gmail.com</a> and we will promptly delete it.</p>
+
+        <h2>7. Data Retention &amp; Deletion</h2>
+        <p>Because all study records and preferences remain solely on your device, you have full control over them at all times. You can erase all local PlayWord data by resetting progress inside Settings, clearing the app's storage in your operating system settings, or uninstalling PlayWord.</p>
+
+        <h2>8. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time to reflect app updates or legal requirements. Any updates will be posted on this page with an updated "Last Updated" date.</p>
+
+        <h2>9. Contact Us</h2>
+        <p>If you have any questions or privacy inquiries regarding PlayWord, please contact the developer at <a href="mailto:p981393625@gmail.com">p981393625@gmail.com</a>.</p>
+      </section>
+
+      <!-- SIMPLIFIED CHINESE -->
+      <section id="lang-zh" lang="zh-Hans" dir="ltr" class="policy-section">
+        <h1>PlayWord 隐私政策</h1>
+        <div class="meta">
+          <div><strong>应用名称：</strong>PlayWord（Android 包名：<code>com.ppgiao123.playword</code>）</div>
+          <div><strong>适用版本：</strong>v1.0.0（100% 纯离线、无广告、无需登录）</div>
+          <div><strong>开发者：</strong>PPgiao123</div>
+          <div><strong>生效 / 更新日期：</strong>2026-11-26</div>
+          <div><strong>联系邮箱：</strong><a href="mailto:p981393625@gmail.com">p981393625@gmail.com</a></div>
+        </div>
+
+        <h2>1. 适用范围</h2>
+        <p>本隐私政策适用于由 <strong>PPgiao123</strong> 开发并发布的英语背词与单人单词对抗应用 <strong>PlayWord</strong>（Android 包名：<code>com.ppgiao123.playword</code> 及 Windows 桌面版），用于说明 <code>v1.0.0</code> 版本如何处理用户与设备信息。</p>
+
+        <h2>2. 我们不收集的信息</h2>
+        <p><strong>PlayWord v1.0.0</strong> 采用纯离线设计，无需注册或登录账号。开发者<strong>不</strong>自建后端服务器，也<strong>不收集、不上传、不存储、不出售或共享</strong>任何个人身份信息、学习统计遥测、崩溃日志、通讯录、相册照片、麦克风录音、相机画面、精确或粗略位置信息、设备标识符或 Android 广告 ID。</p>
+
+        <h2>3. 设备本地存储与备份码说明</h2>
+        <p>为保障离线背词体验，PlayWord 仅在您的设备本地应用存储中保存以下数据：</p>
+        <ul>
+          <li><strong>学习与复习进度：</strong>当前所选词书、FSRS-4.5 间隔复习计划、生词本与已掌握词汇记录、词汇量测评历史及断点、单人对抗统计；</li>
+          <li><strong>应用偏好设置：</strong>界面语言、英语离线发音口音、音量大小、震屏开关、触觉震动开关以及护眼主题选择。</li>
+        </ul>
+        <p>您可在“设置”中手动导出或恢复本地压缩备份码（<code>PW1:</code>）。本应用仅在您主动点击导出或恢复按钮时读写本机系统剪贴板，数据不会自动上传至任何网络服务。</p>
+
+        <h2>4. 第三方服务与广告说明</h2>
+        <p><strong>PlayWord v1.0.0</strong> <strong>不包含任何广告</strong>，也未集成任何第三方广告联盟 SDK、统计分析 SDK、崩溃上报 SDK 或社交追踪代码。英语单词离线朗读仅在本地调用设备系统自带的文本转语音（TTS）引擎。若未来版本接入可选广告、应用内购买或联网服务，我们将在发版前同步更新本隐私政策与 Google Play 数据安全声明。</p>
+
+        <h2>5. 设备权限说明</h2>
+        <p>PlayWord 仅声明本地功能所需的最小权限：</p>
+        <ul>
+          <li><code>VIBRATE</code>：用于按钮轻量触觉反馈（可随时在设置中关闭）；</li>
+          <li><code>android.intent.action.TTS_SERVICE</code> 查询：用于检测系统本地文本转语音引擎以支持离线英语发音。</li>
+        </ul>
+        <p><code>v1.0.0</code> <strong>不申请</strong>网络访问（<code>INTERNET</code>）、广告 ID（<code>AD_ID</code>）、位置、相机、麦克风、通讯录或外部媒体读写权限。</p>
+
+        <h2>6. 儿童隐私</h2>
+        <p>PlayWord 面向 <strong>13 岁及以上</strong>学习者（内置初高中、大学与成人备考词书），并不面向 13 岁以下儿童提供服务，也不会主动收集 13 岁以下儿童的个人信息。若家长或监护人认为儿童通过邮件等渠道向我们提供了个人信息，请发送邮件至 <a href="mailto:p981393625@gmail.com">p981393625@gmail.com</a>，我们将及时删除。</p>
+
+        <h2>7. 数据保留与删除</h2>
+        <p>所有学习进度与偏好设置均完全保存在您的设备本地，您拥有完全控制权。您可随时通过设置中的重置功能、操作系统应用管理中的“清除存储空间”，或直接卸载 PlayWord 来彻底删除所有本地数据。</p>
+
+        <h2>8. 隐私政策变更</h2>
+        <p>我们可能随应用功能迭代或法规要求适时更新本隐私政策。任何更新都会发布在本页面并同步修订“生效 / 更新日期”。</p>
+
+        <h2>9. 联系我们</h2>
+        <p>如对 PlayWord 的隐私保护有任何疑问或请求，请发送邮件至 <a href="mailto:p981393625@gmail.com">p981393625@gmail.com</a>。</p>
+      </section>
+
+      <!-- TRADITIONAL CHINESE -->
+      <section id="lang-zh-tw" lang="zh-Hant" dir="ltr" class="policy-section">
+        <h1>PlayWord 隱私權政策</h1>
+        <div class="meta">
+          <div><strong>應用程式名稱：</strong>PlayWord（Android 套件名稱：<code>com.ppgiao123.playword</code>）</div>
+          <div><strong>適用版本：</strong>v1.0.0（100% 純離線、無廣告、無需登入）</div>
+          <div><strong>開發者：</strong>PPgiao123</div>
+          <div><strong>生效 / 更新日期：</strong>2026-11-26</div>
+          <div><strong>聯絡信箱：</strong><a href="mailto:p981393625@gmail.com">p981393625@gmail.com</a></div>
+        </div>
+
+        <h2>1. 適用範圍</h2>
+        <p>本隱私權政策適用於由 <strong>PPgiao123</strong> 開發並發佈的英語單字記憶與單人對戰應用 <strong>PlayWord</strong>（Android 套件名稱：<code>com.ppgiao123.playword</code> 及 Windows 桌面版），說明 <code>v1.0.0</code> 版本如何處理使用者與裝置資訊。</p>
+
+        <h2>2. 我們不蒐集的資訊</h2>
+        <p><strong>PlayWord v1.0.0</strong> 採純離線架構設計，無需註冊或登入帳號。開發者<strong>不</strong>自行維運伺服器，亦<strong>不蒐集、不上傳、不儲存、不販售或分享</strong>任何個人識別資料、使用遙測、當機紀錄、通訊錄、相片、麥克風音訊、相機畫面、精確或約略位置、裝置識別碼或 Android 廣告 ID。</p>
+
+        <h2>3. 裝置本機儲存與備份碼說明</h2>
+        <p>為提供無需帳號的離線學習體驗，PlayWord 僅於您的裝置本機儲存以下資料：</p>
+        <ul>
+          <li><strong>學習與複習進度：</strong>目前選用詞書、FSRS-4.5 遺忘曲線排程、生字本與已熟記單字紀錄、詞彙量測驗結果與斷點、單人對戰統計；</li>
+          <li><strong>偏好設定：</strong>介面語言、離線英語發音口音、音量、螢幕震動開關、觸覺回饋開關及護眼主題。</li>
+        </ul>
+        <p>您可於「設定」中主動匯出或還原本機壓縮備份碼（<code>PW1:</code>）。本應用程式僅在您點擊對應按鈕時讀寫本機剪貼簿，資料不會自動傳送至任何網路服務。</p>
+
+        <h2>4. 第三方服務與廣告說明</h2>
+        <p><strong>PlayWord v1.0.0</strong> <strong>不含任何廣告</strong>，亦未整合任何第三方廣告聯播網 SDK、數據分析 SDK 或當機回報工具。離線英語朗讀僅於本機呼叫裝置內建之文字轉語音（TTS）引擎。若未來版本新增可選廣告、應用程式內購買或連線功能，我們將於發佈前同步更新本隱私權政策與 Google Play 資料安全聲明。</p>
+
+        <h2>5. 裝置權限說明</h2>
+        <p>PlayWord 僅要求本機功能所需之最小權限：</p>
+        <ul>
+          <li><code>VIBRATE</code>：用於按鈕輕觸覺震動回饋（可於設定中隨時關閉）；</li>
+          <li><code>android.intent.action.TTS_SERVICE</code> 查詢：用於偵測裝置本機語音引擎以支援離線英語發音。</li>
+        </ul>
+        <p><code>v1.0.0</code> <strong>不申請</strong>網路存取（<code>INTERNET</code>）、廣告 ID（<code>AD_ID</code>）、位置、相機、麥克風、通訊錄或外部媒體儲存權限。</p>
+
+        <h2>6. 兒童隱私權</h2>
+        <p>PlayWord 面向 <strong>13 歲以上</strong>學習者（涵蓋高中、大學與成人考試詞書），並不以 13 歲以下兒童為目標受眾，亦不會故意蒐集 13 歲以下兒童之個人資料。若家長或監護人認為兒童曾透過郵件等方式向我們提供個人資料，請來信 <a href="mailto:p981393625@gmail.com">p981393625@gmail.com</a>，我們將盡速刪除。</p>
+
+        <h2>7. 資料保留與刪除</h2>
+        <p>所有學習紀錄與設定均完全保留於您的裝置本機。您可隨時透過設定中的重設功能、系統應用程式設定的「清除儲存空間」，或解除安裝 PlayWord 來徹底移除所有本機資料。</p>
+
+        <h2>8. 本政策之修訂</h2>
+        <p>我們可能會因應應用程式更新或法規需求不定期修訂本隱私權政策，所有更新內容將公告於此頁面並同步修改「生效 / 更新日期」。</p>
+
+        <h2>9. 聯絡我們</h2>
+        <p>若您對 PlayWord 的隱私保護有任何疑問或需求，請來信至 <a href="mailto:p981393625@gmail.com">p981393625@gmail.com</a>。</p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      var supported = ["en", "zh", "zh-tw"];
+      var buttons = document.querySelectorAll(".lang-btn");
+      var sections = document.querySelectorAll(".policy-section");
+
+      function selectLang(code, updateHash) {
+        if (supported.indexOf(code) === -1) code = "en";
+        for (var i = 0; i < sections.length; i++) {
+          var isTarget = sections[i].id === "lang-" + code;
+          sections[i].classList.toggle("active", isTarget);
+        }
+        for (var j = 0; j < buttons.length; j++) {
+          var active = buttons[j].getAttribute("data-lang") === code;
+          buttons[j].classList.toggle("active", active);
+          buttons[j].setAttribute("aria-pressed", active ? "true" : "false");
+        }
+        if (updateHash && window.history && window.history.replaceState) {
+          window.history.replaceState(null, "", "#" + code);
+        }
+      }
+
+      for (var k = 0; k < buttons.length; k++) {
+        buttons[k].addEventListener("click", function () {
+          selectLang(this.getAttribute("data-lang"), true);
+        });
+      }
+
+      var initial = window.location.hash ? window.location.hash.replace("#", "").toLowerCase() : "en";
+      selectLang(initial, false);
+    })();
+  </script>
+</body>
+</html>

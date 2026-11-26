@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PlayWord — Offline English Vocabulary Trainer &amp; Word Duels | PPgiao123</title>
+  <meta name="description" content="Master English words offline with FSRS-4.5 spaced repetition, 16 regional exam wordbooks, 24,000-word vocabulary testing, and 5 solo word duel modes. Zero ads, zero sign-in.">
+  <link rel="icon" type="image/png" href="../assets/playword/icon.png">
+  <link rel="apple-touch-icon" href="../assets/playword/icon.png">
+
+  <!-- Open Graph / Social Share Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PlayWord — Offline English Vocabulary Trainer &amp; Word Duels">
+  <meta property="og:description" content="FSRS-4.5 review, 16 exam wordbooks, 24k vocabulary assessment, and 5 fast solo word duel modes. 100% offline &amp; ad-free.">
+  <meta property="og:url" content="https://ppgiao123.github.io/PlayWord/">
+  <meta property="og:image" content="https://ppgiao123.github.io/assets/playword/feature-graphic.png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="500">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PlayWord — Offline English Vocabulary Trainer &amp; Word Duels">
+  <meta name="twitter:description" content="FSRS-4.5 review, 16 exam wordbooks, 24k vocabulary assessment, and 5 fast solo word duel modes. 100% offline &amp; ad-free.">
+  <meta name="twitter:image" content="https://ppgiao123.github.io/assets/playword/feature-graphic.png">
+
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f6f8f5;
+      --surface: #ffffff;
+      --surface-elevated: #ffffff;
+      --surface-muted: #eef3ef;
+      --text: #0d254c;
+      --body: #475569;
+      --muted: #64748b;
+      --border: #dce5df;
+      --primary: #00b377;
+      --primary-hover: #009966;
+      --primary-soft: rgba(0, 179, 119, 0.12);
+      --primary-text: #007d53;
+      --sky: #0ea5e9;
+      --sky-hover: #0284c7;
+      --sky-soft: rgba(14, 165, 233, 0.12);
+      --sky-text: #0369a1;
+      --glow-mint: rgba(183, 248, 224, 0.68);
+      --glow-sky: rgba(91, 228, 248, 0.5);
+      --shadow-sm: 0 4px 14px rgba(13, 37, 76, 0.06);
+      --shadow-md: 0 14px 36px rgba(13, 37, 76, 0.09);
+      --shadow-lg: 0 22px 54px rgba(13, 37, 76, 0.12);
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --radius-sm: 12px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --surface: #162033;
+        --surface-elevated: #1c2940;
+        --surface-muted: #1b283d;
+        --text: #e8eef6;
+        --body: #cbd5e1;
+        --muted: #94a3b8;
+        --border: #26354d;
+        --primary: #2dd4a8;
+        --primary-hover: #14b88e;
+        --primary-soft: rgba(45, 212, 168, 0.16);
+        --primary-text: #5eead4;
+        --sky: #5bc8fa;
+        --sky-hover: #38bdf8;
+        --sky-soft: rgba(91, 200, 250, 0.16);
+        --sky-text: #7dd3fc;
+        --glow-mint: rgba(45, 212, 168, 0.14);
+        --glow-sky: rgba(91, 200, 250, 0.16);
+        --shadow-sm: 0 4px 16px rgba(2, 6, 23, 0.32);
+        --shadow-md: 0 16px 38px rgba(2, 6, 23, 0.42);
+        --shadow-lg: 0 24px 60px rgba(2, 6, 23, 0.55);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg);
+      background-image:
+        radial-gradient(900px 440px at 12% -6%, var(--glow-sky), transparent 65%),
+        radial-gradient(840px 440px at 94% 4%, var(--glow-mint), transparent 62%);
+      background-repeat: no-repeat;
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: var(--sky);
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Top Navigation */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      background: color-mix(in srgb, var(--bg) 82%, transparent);
+      border-bottom: 1px solid color-mix(in srgb, var(--border) 75%, transparent);
+    }
+
+    .topbar-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px 16px;
+      min-height: 66px;
+      padding: 8px 0;
+    }
+
+    .brand-group {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .studio-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      text-decoration: none;
+      color: var(--body);
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: border-color 0.15s ease, color 0.15s ease;
+    }
+
+    .studio-back:hover,
+    .studio-back:focus-visible {
+      border-color: var(--sky);
+      color: var(--sky);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .brand img {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .brand-name {
+      font-size: 1.12rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--body);
+      font-weight: 600;
+      font-size: 0.92rem;
+      padding: 7px 12px;
+      border-radius: 10px;
+      transition: background-color 0.15s ease, color 0.15s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      background: var(--surface);
+      color: var(--text);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 44px 0 36px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+      gap: 36px;
+      align-items: center;
+    }
+
+    .hero-grid > *,
+    .duel-spotlight > *,
+    .features-grid > * {
+      min-width: 0;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 13px;
+      border-radius: 999px;
+      background: var(--sky-soft);
+      color: var(--sky-text);
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      margin-bottom: 16px;
+    }
+
+    .hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--sky);
+    }
+
+    .hero h1 {
+      margin: 0 0 16px;
+      font-size: clamp(2.15rem, 4.3vw, 3.25rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--text);
+    }
+
+    .hero-subtitle {
+      margin: 0 0 26px;
+      font-size: 1.06rem;
+      color: var(--body);
+      max-width: 56ch;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 20px;
+      border-radius: 14px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      font-size: 0.98rem;
+      line-height: 1.2;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.14s ease, background-color 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+
+    .cta-btn:active {
+      transform: translateY(1px) scale(0.99);
+    }
+
+    .cta-btn svg {
+      width: 20px;
+      height: 20px;
+      flex: 0 0 auto;
+    }
+
+    .cta-primary {
+      background: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 10px 24px rgba(0, 179, 119, 0.25);
+    }
+
+    .cta-primary:hover,
+    .cta-primary:focus-visible {
+      background: var(--primary-hover);
+      box-shadow: 0 12px 28px rgba(0, 179, 119, 0.34);
+    }
+
+    .cta-secondary {
+      background: var(--surface);
+      color: var(--text);
+      border-color: var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .cta-secondary:hover,
+    .cta-secondary:focus-visible {
+      border-color: var(--sky);
+      background: var(--surface-elevated);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .cta-primary {
+        color: #06281e;
+      }
+    }
+
+    .cta-pill {
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.22);
+      color: inherit;
+      letter-spacing: 0.02em;
+    }
+
+    .cta-secondary .cta-pill {
+      background: var(--sky-soft);
+      color: var(--sky-text);
+    }
+
+    .trust-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .trust-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .trust-item svg {
+      width: 16px;
+      height: 16px;
+      color: var(--primary);
+      flex: 0 0 auto;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .social-links[hidden] {
+      display: none;
+    }
+
+    .social-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 13px;
+      border-radius: 999px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.86rem;
+      font-weight: 600;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .social-chip:hover,
+    .social-chip:focus-visible {
+      border-color: var(--sky);
+      color: var(--sky);
+    }
+
+    /* Hero Showcase */
+    .hero-visual {
+      display: grid;
+      gap: 14px;
+    }
+
+    .keyart-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 10px;
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+
+    .keyart-card img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1024 / 500;
+      object-fit: contain;
+      border-radius: 14px;
+    }
+
+    .preview-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 14px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .preview-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .preview-tab {
+      flex: 1 1 110px;
+      padding: 7px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--surface-muted);
+      color: var(--body);
+      font-size: 0.84rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .preview-tab.is-active {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+    }
+
+    .preview-stage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--surface-muted);
+      border-radius: 16px;
+      padding: 12px;
+      min-height: 290px;
+    }
+
+    .preview-stage button {
+      background: none;
+      border: 0;
+      padding: 0;
+      cursor: zoom-in;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .preview-stage img {
+      width: auto;
+      height: auto;
+      max-height: 280px;
+      max-width: 100%;
+      object-fit: contain;
+      border-radius: 14px;
+      box-shadow: var(--shadow-sm);
+      background: #eae5dc;
+    }
+
+    .preview-caption {
+      margin: 10px 2px 0;
+      font-size: 0.86rem;
+      color: var(--muted);
+      text-align: center;
+      font-weight: 600;
+    }
+
+    /* Section Headings */
+    section.block {
+      padding: 36px 0;
+    }
+
+    .section-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .section-kicker {
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--primary-text);
+      margin-bottom: 4px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(1.5rem, 2.8vw, 2rem);
+      letter-spacing: -0.02em;
+    }
+
+    .section-note {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    /* Screenshots Gallery */
+    .shots-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .shot-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 12px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: transform 0.16s ease, box-shadow 0.16s ease;
+    }
+
+    .shot-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .shot-trigger {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: zoom-in;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .shot-trigger img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 9 / 16;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .shot-title {
+      margin: 0;
+      font-size: 0.96rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .shot-desc {
+      margin: 0;
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    .duel-spotlight {
+      margin-top: 18px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      box-shadow: var(--shadow-sm);
+      display: grid;
+      grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+      gap: 24px;
+      align-items: center;
+    }
+
+    .duel-stage {
+      background: var(--surface-muted);
+      border-radius: 16px;
+      padding: 14px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .duel-stage .shot-trigger {
+      width: auto;
+    }
+
+    .duel-stage .shot-trigger img {
+      aspect-ratio: 9 / 16;
+      width: auto;
+      max-height: 410px;
+      max-width: 100%;
+      object-fit: contain;
+    }
+
+    .duel-copy h3 {
+      margin: 0 0 8px;
+      font-size: 1.28rem;
+      letter-spacing: -0.015em;
+    }
+
+    .duel-copy p {
+      margin: 0 0 12px;
+      color: var(--body);
+      font-size: 0.96rem;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .info-pill {
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: var(--surface-muted);
+      color: var(--body);
+      border: 1px solid var(--border);
+    }
+
+    /* Feature Cards */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px 22px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .feature-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--primary-soft);
+      color: var(--primary-text);
+      flex: 0 0 auto;
+    }
+
+    .feature-icon--sky {
+      background: var(--sky-soft);
+      color: var(--sky-text);
+    }
+
+    .feature-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .feature-card h3 {
+      margin: 0 0 5px;
+      font-size: 1.06rem;
+    }
+
+    .feature-card p {
+      margin: 0;
+      color: var(--body);
+      font-size: 0.93rem;
+    }
+
+    /* Developer & Support Section */
+    .support-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px 26px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .support-meta h2 {
+      margin: 0 0 6px;
+      font-size: 1.25rem;
+    }
+
+    .pkg {
+      display: inline-block;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.83rem;
+      padding: 3px 9px;
+      border-radius: 7px;
+      background: var(--sky-soft);
+      color: var(--sky-text);
+      margin-bottom: 8px;
+    }
+
+    .support-meta p {
+      margin: 0;
+      color: var(--body);
+      font-size: 0.94rem;
+    }
+
+    .support-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 15px;
+      border-radius: 11px;
+      border: 1px solid var(--border);
+      background: var(--surface-muted);
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .btn-outline:hover,
+    .btn-outline:focus-visible {
+      border-color: var(--sky);
+      color: var(--sky);
+    }
+
+    footer {
+      margin-top: 20px;
+      padding: 22px 0 42px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.88rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: underline;
+    }
+
+    /* Modals & Lightbox */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 90;
+      background: rgba(9, 14, 26, 0.72);
+      backdrop-filter: blur(6px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-backdrop[hidden] {
+      display: none;
+    }
+
+    .modal-dialog {
+      width: min(480px, 100%);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+    }
+
+    .modal-dialog--lightbox {
+      width: auto;
+      max-width: min(92vw, 960px);
+      padding: 14px;
+    }
+
+    .modal-dialog--lightbox img {
+      max-height: 80vh;
+      width: auto;
+      margin: 0 auto;
+      border-radius: 12px;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface-muted);
+      color: var(--text);
+      font-size: 1.15rem;
+      line-height: 1;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-dialog h3 {
+      margin: 0 36px 10px 0;
+      font-size: 1.2rem;
+    }
+
+    .modal-dialog p {
+      margin: 0 0 14px;
+      color: var(--body);
+      font-size: 0.95rem;
+    }
+
+    .modal-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .lightbox-caption {
+      margin: 10px 6px 2px;
+      text-align: center;
+      color: var(--body);
+      font-weight: 600;
+      font-size: 0.92rem;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 920px) {
+      .hero-grid,
+      .duel-spotlight {
+        grid-template-columns: 1fr;
+      }
+
+      .shots-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding-top: 26px;
+      }
+
+      .nav-links a {
+        padding: 6px 8px;
+        font-size: 0.85rem;
+      }
+
+      .cta-row {
+        flex-direction: column;
+      }
+
+      .cta-btn {
+        width: 100%;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .shots-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 8px;
+        gap: 12px;
+      }
+
+      .shot-card {
+        flex: 0 0 68%;
+        scroll-snap-align: start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand-group">
+        <a class="studio-back" href="../" aria-label="Back to PPgiao123 studio homepage">&larr; PPgiao123</a>
+        <a class="brand" href="./">
+          <img src="../assets/playword/icon.png" alt="PlayWord app icon" width="36" height="36">
+          <span class="brand-name">PlayWord</span>
+        </a>
+      </div>
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="#features">Features</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#support">Support</a>
+        <a href="./privacy/">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" aria-label="PlayWord Overview">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-badge">
+            <span class="hero-badge-dot" aria-hidden="true"></span>
+            Offline English Trainer &middot; Ad-Free
+          </div>
+          <h1>Learn Every Word. Win Every Duel.</h1>
+          <p class="hero-subtitle">
+            Master English vocabulary offline with FSRS-4.5 memory scheduling, 16 regional exam wordbooks, 12,853 real-context sentences, 24k vocabulary assessment, and 5 fast solo word-duel modes.
+          </p>
+
+          <div class="cta-row">
+            <button type="button" class="cta-btn cta-primary" id="cta-play-store">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M3.61 1.814L13.793 12 3.61 22.186a1.75 1.75 0 0 1-.61-1.335V3.149c0-.517.224-.997.61-1.335zm11.24 11.242l2.747 2.747-10.777 6.13 8.03-8.877zm3.896-2.216l2.48 1.411c.76.432.76 1.526 0 1.958l-2.48 1.411-3.035-3.035 3.035-1.745zM6.82 2.067l10.777 6.13-2.747 2.747-8.03-8.877z"/>
+              </svg>
+              <span class="cta-label">Google Play</span>
+              <span class="cta-pill">Coming Soon</span>
+            </button>
+
+            <button type="button" class="cta-btn cta-secondary" id="cta-windows-build">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="14" rx="2"/>
+                <path d="M8 21h8"/>
+                <path d="M12 18v3"/>
+              </svg>
+              <span class="cta-label">Windows Edition</span>
+              <span class="cta-pill">v1.0.0 Ready</span>
+            </button>
+          </div>
+
+          <div class="trust-strip" aria-label="App highlights">
+            <span class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              No Account or Ads
+            </span>
+            <span class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              100% Offline Study
+            </span>
+            <span class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              9 Interface Languages
+            </span>
+          </div>
+
+          <div class="social-links" id="social-links" hidden aria-label="Official Channels"></div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="keyart-card">
+            <img src="../assets/playword/feature-graphic.png" alt="PlayWord key visual showcasing study cards and word duel arena" width="1024" height="500">
+          </div>
+
+          <div class="preview-card" aria-label="Interactive App Preview">
+            <div class="preview-tabs" role="tablist" aria-label="Select app view">
+              <button type="button" class="preview-tab is-active" role="tab" aria-selected="true"
+                data-src="../assets/playword/shot-study.png"
+                data-alt="PlayWord daily FSRS study card with example sentence, TTS audio, and verb forms"
+                data-caption="FSRS-4.5 Card · Real Context Sentences &amp; Verb Forms">Study Card</button>
+              <button type="button" class="preview-tab" role="tab" aria-selected="false"
+                data-src="../assets/playword/shot-home.png"
+                data-alt="PlayWord warm-paper daily learning hub with quick lookup and mistake clinic"
+                data-caption="Warm Paper Hub · Daily Quota, Quick Lookup &amp; Audio">Daily Hub</button>
+              <button type="button" class="preview-tab" role="tab" aria-selected="false"
+                data-src="../assets/playword/shot-duel.png"
+                data-alt="PlayWord solo tug-of-war vocabulary duel against AI opponent"
+                data-caption="Solo Word Duel · Outscore AI Opponents Across 5 Modes">Word Duel</button>
+            </div>
+            <div class="preview-stage">
+              <button type="button" id="hero-preview-zoom" aria-label="Enlarge PlayWord screenshot">
+                <img id="hero-preview-img" src="../assets/playword/shot-study.png" alt="PlayWord daily FSRS study card with example sentence, TTS audio, and verb forms">
+              </button>
+            </div>
+            <p class="preview-caption" id="hero-preview-caption">FSRS-4.5 Card &middot; Real Context Sentences &amp; Verb Forms</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="screenshots" aria-label="App Screenshots">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">In-App Capture</div>
+          <h2>Focused Reading Themes &amp; Active Recall</h2>
+        </div>
+        <p class="section-note">Tap any screenshot to inspect full resolution.</p>
+      </div>
+
+      <div class="shots-grid">
+        <article class="shot-card">
+          <button type="button" class="shot-trigger"
+            data-lightbox-src="../assets/playword/shot-study.png"
+            data-lightbox-caption="Active Recall Card — Real example sentences, offline pronunciation, and verb inflections">
+            <img src="../assets/playword/shot-study.png" alt="PlayWord vocabulary study card screenshot" loading="lazy">
+          </button>
+          <h3 class="shot-title">Context &amp; Verb Forms</h3>
+          <p class="shot-desc">Review authentic sentences, offline TTS audio, and full verb past/participle forms.</p>
+        </article>
+
+        <article class="shot-card">
+          <button type="button" class="shot-trigger"
+            data-lightbox-src="../assets/playword/shot-home.png"
+            data-lightbox-caption="Warm Paper Hub — Daily study goal, mistake clinic, audio commute mode, and streak tracking">
+            <img src="../assets/playword/shot-home.png" alt="PlayWord Warm Paper home dashboard screenshot" loading="lazy">
+          </button>
+          <h3 class="shot-title">Warm Paper Dashboard</h3>
+          <p class="shot-desc">Low-glare Warm Paper default theme with instant word search and daily targets.</p>
+        </article>
+
+        <article class="shot-card">
+          <button type="button" class="shot-trigger"
+            data-lightbox-src="../assets/playword/shot-amber.png"
+            data-lightbox-caption="Amber Paper Theme — Three eye-care presets (Warm Paper, Amber Paper, Midnight Dark)">
+            <img src="../assets/playword/shot-amber.png" alt="PlayWord Amber Paper theme screenshot" loading="lazy">
+          </button>
+          <h3 class="shot-title">Eye-Care Themes</h3>
+          <p class="shot-desc">Switch freely between Warm Paper, Amber Paper, and Midnight Dark for night study.</p>
+        </article>
+
+        <article class="shot-card">
+          <button type="button" class="shot-trigger"
+            data-lightbox-src="../assets/playword/shot-lexicon.png"
+            data-lightbox-caption="16 Exam Wordbooks — Browse A–Z entries across IELTS, TOEFL, GRE, GSAT, HKDSE, and ЕГЭ">
+            <img src="../assets/playword/shot-lexicon.png" alt="PlayWord IELTS wordbook browser screenshot" loading="lazy">
+          </button>
+          <h3 class="shot-title">16 Exam Wordbooks</h3>
+          <p class="shot-desc">Region-aware decks tailored for IELTS, TOEFL, GRE, GSAT, HKDSE, and Russian ЕГЭ.</p>
+        </article>
+      </div>
+
+      <article class="duel-spotlight">
+        <div class="duel-stage">
+          <button type="button" class="shot-trigger"
+            data-lightbox-src="../assets/playword/shot-duel.png"
+            data-lightbox-caption="Solo Word Duels — Tug-of-war, Affix Forge, Bug Swat, Syntax Stack, and Sonic Radar">
+            <img src="../assets/playword/shot-duel.png" alt="PlayWord tug-of-war AI duel mode screenshot" loading="lazy">
+          </button>
+        </div>
+        <div class="duel-copy">
+          <div class="section-kicker">5 Solo Word Duels</div>
+          <h3>Turn Weak Words into Fast Reflexes</h3>
+          <p>
+            Words you hesitate on flow automatically into five brisk solo arena challenges against three adaptive AI opponents: Meaning Tug-of-War, Affix Forge, Error Bug Swat, Syntax Stack, and Sonic Radar. Play offline anytime with tactile hit-stop and streak bonuses.
+          </p>
+          <div class="pill-list">
+            <span class="info-pill">Tug-of-War</span>
+            <span class="info-pill">Affix Forge</span>
+            <span class="info-pill">Error Bug Swat</span>
+            <span class="info-pill">Syntax Stack</span>
+            <span class="info-pill">Sonic Radar</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="block" id="features" aria-label="App Highlights">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Built for Retention</div>
+          <h2>Science-Backed Review Meets Playable Practice</h2>
+        </div>
+      </div>
+
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20V10"/>
+              <path d="M18 20V4"/>
+              <path d="M6 20v-4"/>
+            </svg>
+          </div>
+          <div>
+            <h3>FSRS-4.5 Memory Engine</h3>
+            <p>Calculates real-time memory stability across multi-day reviews—12,853 curated words, 12,413 authentic context sentences, and 2,928 complete verb conjugation sets.</p>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon feature-icon--sky" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+            </svg>
+          </div>
+          <div>
+            <h3>16 Exam Wordbooks &amp; 24k Test</h3>
+            <p>Switch cleanly between regional wordbooks (IELTS, TOEFL, GRE, Gaokao, CET-4/6, GSAT, HKDSE, Russian ЕГЭ) and measure true vocabulary size against 24,000 ranked words.</p>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon feature-icon--sky" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
+          <div>
+            <h3>9 Interface Languages</h3>
+            <p>Full offline UI support in 简体中文, 繁體中文, Русский, ภาษาไทย, Tiếng Việt, Indonesia, Melayu, 日本語, and 한국어 with bundled CJK, Thai, and IPA fonts.</p>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Offline Audio &amp; Local Backup</h3>
+            <p>Hands-free audio commute player, weekly study heatmap, offline device TTS accents, and instant compressed backup codes (<code>PW1:</code>)—zero servers or tracking.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="block" id="support" aria-label="Developer Support and Legal">
+      <div class="support-panel">
+        <div class="support-meta">
+          <div class="pkg">com.ppgiao123.playword</div>
+          <h2>Developer Support &amp; Public Policies</h2>
+          <p>Published by <strong>PPgiao123</strong>. Questions, bug reports, or privacy requests: <a href="mailto:p981393625@gmail.com">p981393625@gmail.com</a></p>
+        </div>
+        <div class="support-actions">
+          <a class="btn-outline" href="../">All Apps by PPgiao123</a>
+          <a class="btn-outline" href="./privacy/">Privacy Policy</a>
+          <a class="btn-outline" href="mailto:p981393625@gmail.com?subject=PlayWord%20Support">Email Support</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>&copy; 2026 PPgiao123 &middot; PlayWord</span>
+      <span>
+        <a href="../">All Apps by PPgiao123</a> &middot;
+        <a href="./privacy/">Privacy Policy</a> &middot;
+        <a href="mailto:p981393625@gmail.com">p981393625@gmail.com</a>
+      </span>
+    </footer>
+  </main>
+
+  <!-- Google Play / Windows Edition Info Modal -->
+  <div class="modal-backdrop" id="cta-modal" hidden role="dialog" aria-modal="true" aria-labelledby="cta-modal-title">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close" id="cta-modal-close" aria-label="Close modal">&times;</button>
+      <h3 id="cta-modal-title">PlayWord</h3>
+      <p id="cta-modal-body"></p>
+      <div class="modal-actions" id="cta-modal-actions"></div>
+    </div>
+  </div>
+
+  <!-- Screenshot Lightbox Modal -->
+  <div class="modal-backdrop" id="lightbox-modal" hidden role="dialog" aria-modal="true" aria-labelledby="lightbox-caption">
+    <div class="modal-dialog modal-dialog--lightbox">
+      <button type="button" class="modal-close" id="lightbox-close" aria-label="Close screenshot">&times;</button>
+      <img id="lightbox-img" src="../assets/playword/shot-study.png" alt="">
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var PLAYWORD_LINKS = {
+        googlePlayUrl: "", // e.g. "https://play.google.com/store/apps/details?id=com.ppgiao123.playword"
+        windowsUrl: "",    // Optional direct release page URL
+        xUrl: "",
+        instagramUrl: "",
+        youtubeUrl: ""
+      };
+
+      var EMAIL_SUPPORT_HREF = "mailto:p981393625@gmail.com?subject=PlayWord%20Early%20Access%20%2F%20Feedback";
+
+      var ctaModal = document.getElementById("cta-modal");
+      var ctaModalTitle = document.getElementById("cta-modal-title");
+      var ctaModalBody = document.getElementById("cta-modal-body");
+      var ctaModalActions = document.getElementById("cta-modal-actions");
+
+      function openCtaModal(title, body, primaryHref, primaryLabel) {
+        ctaModalTitle.textContent = title;
+        ctaModalBody.textContent = body;
+        ctaModalActions.textContent = "";
+
+        if (primaryHref && primaryLabel) {
+          var actionLink = document.createElement("a");
+          actionLink.className = "cta-btn cta-primary";
+          actionLink.href = primaryHref;
+          actionLink.textContent = primaryLabel;
+          ctaModalActions.appendChild(actionLink);
+        }
+
+        var dismissBtn = document.createElement("button");
+        dismissBtn.type = "button";
+        dismissBtn.className = "cta-btn cta-secondary";
+        dismissBtn.textContent = "Close";
+        dismissBtn.addEventListener("click", closeCtaModal);
+        ctaModalActions.appendChild(dismissBtn);
+
+        ctaModal.hidden = false;
+      }
+
+      function closeCtaModal() {
+        ctaModal.hidden = true;
+      }
+
+      function promoteButtonToLink(buttonEl, url, pillText) {
+        var linkEl = document.createElement("a");
+        linkEl.id = buttonEl.id;
+        linkEl.className = buttonEl.className;
+        linkEl.href = url;
+        linkEl.target = "_blank";
+        linkEl.rel = "noopener noreferrer";
+        while (buttonEl.firstChild) {
+          linkEl.appendChild(buttonEl.firstChild);
+        }
+        var pill = linkEl.querySelector(".cta-pill");
+        if (pill && pillText) {
+          pill.textContent = pillText;
+        }
+        buttonEl.parentNode.replaceChild(linkEl, buttonEl);
+      }
+
+      var playBtn = document.getElementById("cta-play-store");
+      if (PLAYWORD_LINKS.googlePlayUrl) {
+        promoteButtonToLink(playBtn, PLAYWORD_LINKS.googlePlayUrl, "Free");
+      } else {
+        playBtn.addEventListener("click", function () {
+          openCtaModal(
+            "Android Release (Google Play)",
+            "PlayWord is preparing its Google Play Android release alongside the v1.0.0 Windows edition. Contact PPgiao123 by email for closed testing invitations or release notifications.",
+            EMAIL_SUPPORT_HREF,
+            "Contact Developer"
+          );
+        });
+      }
+
+      var winBtn = document.getElementById("cta-windows-build");
+      if (PLAYWORD_LINKS.windowsUrl) {
+        promoteButtonToLink(winBtn, PLAYWORD_LINKS.windowsUrl, "v1.0.0");
+      } else {
+        winBtn.addEventListener("click", function () {
+          openCtaModal(
+            "PlayWord v1.0.0 for Windows",
+            "PlayWord v1.0.0 standalone Windows x64 edition runs 100% offline with full keyboard shortcuts, D3D11 rendering, and PW1 backup code transfer.",
+            EMAIL_SUPPORT_HREF,
+            "Request Support / Feedback"
+          );
+        });
+      }
+
+      var socialContainer = document.getElementById("social-links");
+      var socialSpecs = [
+        { key: "xUrl", label: "Follow on X" },
+        { key: "instagramUrl", label: "Instagram" },
+        { key: "youtubeUrl", label: "YouTube" }
+      ];
+      var activeSocialCount = 0;
+      socialSpecs.forEach(function (spec) {
+        var href = PLAYWORD_LINKS[spec.key];
+        if (!href) return;
+        var chip = document.createElement("a");
+        chip.className = "social-chip";
+        chip.href = href;
+        chip.target = "_blank";
+        chip.rel = "noopener noreferrer";
+        chip.textContent = spec.label;
+        socialContainer.appendChild(chip);
+        activeSocialCount += 1;
+      });
+      if (activeSocialCount > 0) {
+        socialContainer.hidden = false;
+      }
+
+      document.getElementById("cta-modal-close").addEventListener("click", closeCtaModal);
+      ctaModal.addEventListener("click", function (e) {
+        if (e.target === ctaModal) closeCtaModal();
+      });
+
+      var previewTabs = document.querySelectorAll(".preview-tab");
+      var previewImg = document.getElementById("hero-preview-img");
+      var previewCaption = document.getElementById("hero-preview-caption");
+      var previewZoom = document.getElementById("hero-preview-zoom");
+
+      previewTabs.forEach(function (tab) {
+        tab.addEventListener("click", function () {
+          previewTabs.forEach(function (t) {
+            t.classList.remove("is-active");
+            t.setAttribute("aria-selected", "false");
+          });
+          tab.classList.add("is-active");
+          tab.setAttribute("aria-selected", "true");
+          previewImg.src = tab.getAttribute("data-src");
+          previewImg.alt = tab.getAttribute("data-alt");
+          previewCaption.textContent = tab.getAttribute("data-caption");
+        });
+      });
+
+      var lightbox = document.getElementById("lightbox-modal");
+      var lightboxImg = document.getElementById("lightbox-img");
+      var lightboxCaption = document.getElementById("lightbox-caption");
+
+      function openLightbox(src, alt, caption) {
+        lightboxImg.src = src;
+        lightboxImg.alt = alt || caption || "PlayWord screenshot";
+        lightboxCaption.textContent = caption || "";
+        lightbox.hidden = false;
+      }
+
+      function closeLightbox() {
+        lightbox.hidden = true;
+      }
+
+      previewZoom.addEventListener("click", function () {
+        openLightbox(previewImg.src, previewImg.alt, previewCaption.textContent);
+      });
+
+      document.querySelectorAll(".shot-trigger").forEach(function (trigger) {
+        trigger.addEventListener("click", function () {
+          var img = trigger.querySelector("img");
+          openLightbox(
+            trigger.getAttribute("data-lightbox-src"),
+            img ? img.alt : "",
+            trigger.getAttribute("data-lightbox-caption")
+          );
+        });
+      });
+
+      document.getElementById("lightbox-close").addEventListener("click", closeLightbox);
+      lightbox.addEventListener("click", function (e) {
+        if (e.target === lightbox) closeLightbox();
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          closeCtaModal();
+          closeLightbox();
+        }
+      });
+    })();
+  </script>
+
+  <!-- Cloudflare Web Analytics -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "59632fbe31f4429789926275b44cf332"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+</body>
+</html>

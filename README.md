@@ -11,31 +11,46 @@ ppgiao123.github.io/
 ├── index.html                        # PPgiao123 全部应用官网主页（Studio Hub）
 ├── app-ads.txt                       # Google AdMob authorized seller 声明
 ├── assets/
-│   └── arrowgo/
-│       ├── icon.png                  # ArrowGO 512x512 应用图标
+│   ├── arrowgo/
+│   │   ├── icon.png                  # ArrowGO 512x512 应用图标
+│   │   ├── feature-graphic.png       # 1024x500 主视觉与 Open Graph 分享卡片图
+│   │   ├── shot-untangle.png         # Level 15 Grand Untangle 实机截图
+│   │   ├── shot-heart.png            # Level 06 心形棋盘实机截图
+│   │   ├── shot-keylock.png          # Level 07 钥匙锁链实机截图
+│   │   ├── shot-hub.png              # 45 关与每日/随机模式实机截图
+│   │   └── shot-duel.png             # 本地双人 / 三档 AI 分屏对战截图
+│   └── playword/
+│       ├── icon.png                  # PlayWord 512x512 应用图标
 │       ├── feature-graphic.png       # 1024x500 主视觉与 Open Graph 分享卡片图
-│       ├── shot-untangle.png         # Level 15 Grand Untangle 实机截图
-│       ├── shot-heart.png            # Level 06 心形棋盘实机截图
-│       ├── shot-keylock.png          # Level 07 钥匙锁链实机截图
-│       ├── shot-hub.png              # 45 关与每日/随机模式实机截图
-│       └── shot-duel.png             # 本地双人 / 三档 AI 分屏对战截图
-└── ArrowGO/
-    ├── index.html                    # ArrowGO 完整海外落地页（社媒导流主落点）
+│       ├── shot-home.png             # 暖纸米白学习首页截图
+│       ├── shot-study.png            # FSRS 背词与动词变形截图
+│       ├── shot-duel.png             # 单人词汇对抗截图
+│       ├── shot-amber.png            # 琥珀书页主题截图
+│       └── shot-lexicon.png          # 16 册考纲词书浏览器截图
+├── ArrowGO/
+│   ├── index.html                    # ArrowGO 完整海外落地页（社媒导流主落点）
+│   └── privacy/
+│       └── index.html                # ArrowGO 五语隐私政策（含 v1.10.2 AdMob + UMP 披露）
+└── PlayWord/
+    ├── index.html                    # PlayWord 产品落地页
     └── privacy/
-        └── index.html                # ArrowGO 五语隐私政策（含 v1.10.2 AdMob + UMP 披露）
+        └── index.html                # PlayWord 多语隐私政策（v1.0.0 纯离线无广告）
 ```
 
 GitHub Pages 上线访问地址（注意路径区分大小写）：
 - **PPgiao123 全部应用官网主页（适合放社交账号主页 Bio / Play Console Website）**：`https://ppgiao123.github.io/`
 - **ArrowGO 完整海外落地页（适合发 ArrowGO 宣传视频/帖子附带）**：`https://ppgiao123.github.io/ArrowGO/`
 - **ArrowGO 隐私政策 URL**：`https://ppgiao123.github.io/ArrowGO/privacy/`
+- **PlayWord 产品落地页**：`https://ppgiao123.github.io/PlayWord/`
+- **PlayWord 隐私政策 URL**：`https://ppgiao123.github.io/PlayWord/privacy/`
 - **AdMob `app-ads.txt`**：`https://ppgiao123.github.io/app-ads.txt`
 
 ## Google Play Console 填写对照
 
 仓库 **Settings -> Pages**（`https://github.com/PPgiao123/ppgiao123.github.io/settings/pages`）保持 `Deploy from a branch` -> `main` / `/ (root)`：
 - **Store settings -> Website（开发者官网）**：`https://ppgiao123.github.io/`
-- **App content -> Privacy policy（隐私政策 URL）**：`https://ppgiao123.github.io/ArrowGO/privacy/`
+- **App content -> Privacy policy（ArrowGO 隐私政策 URL）**：`https://ppgiao123.github.io/ArrowGO/privacy/`
+- **App content -> Privacy policy（PlayWord 隐私政策 URL）**：`https://ppgiao123.github.io/PlayWord/privacy/`
 
 ## 10 秒切换上线链接（Google Play / Poki / CrazyGames / 社媒）
 
